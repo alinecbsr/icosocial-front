@@ -9,37 +9,26 @@ const Hero = () => {
     centeredSlides: true,
     autoplay: {
       delay: 2500,
-      disableOnInteraction: false
+      disableOnInteraction: false,
     },
     pagination: {
       el: '.swiper-pagination',
-      clickable: true
+      clickable: true,
     },
     navigation: {
       nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev'
-    }
-  }
+      prevEl: '.swiper-button-prev',
+    },
+  };
   return (
-    <>
-      <header>
-    <figure>
-      <img src="" alt=""/>
-    </figure>
-    <div>
-      <button></button>
-      <button></button>
-    </div>
-      </header>
-      <Swiper {...params}>
-        <div>Slide #1</div>
-        <div>Slide #2</div>
-        <div>Slide #3</div>
-        <div>Slide #4</div>
-        <div>Slide #5</div>
-      </Swiper>
-    </>
-  )
+    // eslint-disable-next-line react/jsx-props-no-spreading
+    <Swiper {...params}>
+      <div>Slide #1</div>
+      <div>Slide #2</div>
+      <div>Slide #3</div>
+      <div>Slide #4</div>
+      <div>Slide #5</div>
+    </Swiper>
+  );
 };
-
 export default Hero;
