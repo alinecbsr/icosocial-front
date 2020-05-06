@@ -1,34 +1,27 @@
 import React from 'react';
-import Swiper from 'react-id-swiper';
+import AwesomeSlider from 'react-awesome-slider';
+import withAutoplay from 'react-awesome-slider/dist/autoplay';
+import 'react-awesome-slider/dist/styles.css';
+import logo1 from '../assets/image/logo1.svg';
+import logo2 from '../assets/image/logo2.svg';
 
-import 'swiper/swiper.scss';
+const AutoplaySlider = withAutoplay(AwesomeSlider);
 
-const Hero = () => {
-  const params = {
-    spaceBetween: 30,
-    centeredSlides: true,
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: false,
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  };
+function Hero() {
   return (
-    // eslint-disable-next-line react/jsx-props-no-spreading
-    <Swiper {...params}>
-      <div>Slide #1</div>
-      <div>Slide #2</div>
-      <div>Slide #3</div>
-      <div>Slide #4</div>
-      <div>Slide #5</div>
-    </Swiper>
+    <AutoplaySlider
+      play
+      cancelOnInteraction={false} // should stop playing on user interaction
+      interval={40000}
+    >
+      <div className="banner">
+        <img src={logo1} alt="img 1" />
+      </div>
+      <div>
+        <img src={logo2} alt="img 1" />
+      </div>
+    </AutoplaySlider>
   );
-};
+}
+
 export default Hero;
