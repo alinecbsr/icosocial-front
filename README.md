@@ -36,6 +36,8 @@ This project was developed with the following technologies:
   <li><a href="https://fullpage.caferati.me/">React Awesome Slider</a></li>
 </ul>
 
+---
+
 ## :computer: Project
 
 
@@ -74,13 +76,19 @@ This project is about the institution's website.
 >
 >You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
+---
+
 ## :family_man_man_boy_boy: Contribute
 
 <p>To contribute, <a href="CONTRIBUTING.md">follow these instructions</a>.</p>
 
+---
+
 ## :memo: License
 
 <p>This project is under the MIT license. See the file <a href="LICENSE.md">LICENSE</a> for more details.</p>
+
+---
 
 ## :blue_heart: Contributors
 
@@ -106,7 +114,7 @@ This project is about the institution's website.
         </sub>
       </a>
       <br />
-      <p><scan title="Code">💻</scan>|<scan title="Documentation">📖</scan>|<scan title="Bugs">🐛</scan></p>
+      <p><scan title="Code">💻</scan>|<scan title="Documentation">🎨</scan>|<scan title="Bugs">🐛</scan></p>
     </td>
     <td align="center" style="border: none;">
       <a href="https://github.com/Marianasn4">
@@ -117,7 +125,7 @@ This project is about the institution's website.
         </sub>
       </a>
       <br />
-      <p><scan title="Code">💻</scan>|<scan title="Documentation">📖</scan></p>
+      <p><scan title="Code">💻</scan>|<scan title="Documentation">🎨</scan></p>
     </td>
     <td align="center" style="border: none;">
       <a href="https://github.com/tteuh">
@@ -128,9 +136,7 @@ This project is about the institution's website.
         </sub>
       </a>
       <br />
-      <p><scan title="Code">💻</scan>|<scan title="Documentation">📖</scan></p>
+      <p><scan title="Code">💻</scan></p>
     </td>
   </tr>
 </table>
-
----
