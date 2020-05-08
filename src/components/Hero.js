@@ -1,9 +1,10 @@
 import React from 'react';
 import AwesomeSlider from 'react-awesome-slider';
 import withAutoplay from 'react-awesome-slider/dist/autoplay';
+import { FiUser } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
 import 'react-awesome-slider/dist/styles.css';
 import logo1 from '../assets/image/logo1.svg';
-import logo2 from '../assets/image/logo2.svg';
 import figure from '../assets/image/figure.svg';
 
 const AutoplaySlider = withAutoplay(AwesomeSlider);
@@ -11,36 +12,107 @@ const AutoplaySlider = withAutoplay(AwesomeSlider);
 function Hero() {
   return (
     <AutoplaySlider
-      play
+      play={false}
       organicArrows={false}
       cancelOnInteraction={false}
       interval={4000}
     >
       <div className="banner">
-        <div className="banner_header">
-          <div className="banner_header-img">
-            <img
-              className="banner_header-logo"
-              src={logo1}
-              alt="Logo Icósocial"
-            />
+        <header>
+          <nav className="banner_header">
+            <Link className="banner_header-img" to="/">
+              <img
+                className="banner_header-img-logo"
+                src={logo1}
+                alt="Logo Icósocial"
+              />
+            </Link>
+            <div className="banner_header-btn">
+              <Link className="banner_header-btn-rgt" to="/.">
+                Cadastro
+              </Link>
+              <Link className="banner_header-btn-lgn" to="/..">
+                <FiUser className="banner_header-btn-lgn-icon" />
+                Login
+              </Link>
+            </div>
+          </nav>
+
+          <div className="banner_main">
+            <div>
+              <p className="banner_main-text">
+                Conectando pessoas...
+                <br />
+                Tansformando vidas!
+              </p>
+            </div>
+            <img className="banner_main-img" src={figure} alt="figure" />
           </div>
-          <div className="banner_header-btn">
-            <button className="banner_header-btn--rgt" type="submit">
-              Cadastro
-            </button>
-            <button className="banner_header-btn-lgn" type="submit">
-              Login
-            </button>
-          </div>
-        </div>
-        <p className="banner_text">Texto</p>
-        <figure className="banner_figure">
-          <img className="banner_img" src={figure} alt="figure" />
-        </figure>
+        </header>
       </div>
-      <div>
-        <img src={logo2} alt="img 1" />
+      <div className="banner">
+        <header>
+          <nav className="banner_header">
+            <Link className="banner_header-img" to="/">
+              <img
+                className="banner_header-img-logo"
+                src={logo1}
+                alt="Logo Icósocial"
+              />
+            </Link>
+            <div className="banner_header-btn">
+              <Link className="banner_header-btn-rgt" to="/.">
+                Cadastro
+              </Link>
+              <Link className="banner_header-btn-lgn" to="/..">
+                <FiUser className="banner_header-btn-lgn-icon" />
+                Login
+              </Link>
+            </div>
+          </nav>
+          <div className="banner_main">
+            <div>
+              <p className="banner_main-text">
+                Conectando pessoas...
+                <br />
+                Tansformando vidas!
+              </p>
+            </div>
+            <img className="banner_main-img" src={figure} alt="figure" />
+          </div>
+        </header>
+      </div>
+      <div className="banner">
+        <header>
+          <nav className="banner_header">
+            <Link className="banner_header-img" to="/">
+              <img
+                className="banner_header-img-logo"
+                src={logo1}
+                alt="Logo Icósocial"
+              />
+            </Link>
+            <div className="banner_header-btn">
+              <Link className="banner_header-btn-rgt" to="/.">
+                Cadastro
+              </Link>
+              <Link className="banner_header-btn-lgn" to="/..">
+                <FiUser className="banner_header-btn-lgn-icon" />
+                Login
+              </Link>
+            </div>
+          </nav>
+          <div className="banner_main">
+            <div>
+              <p className="banner_main-text">
+                Conectando pessoas...
+                <br />
+                Tansformando vidas!
+              </p>
+            </div>
+            <img className="banner_main-img" src={figure} alt="figure" />
+          </div>
+        </header>
       </div>
     </AutoplaySlider>
   );
