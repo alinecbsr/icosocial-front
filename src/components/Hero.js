@@ -12,10 +12,10 @@ const AutoplaySlider = withAutoplay(AwesomeSlider);
 function Hero() {
   return (
     <AutoplaySlider
-      play={false}
+      play
       organicArrows={false}
       cancelOnInteraction={false}
-      interval={4000}
+      interval={6000}
     >
       <div className="banner">
         <header>
