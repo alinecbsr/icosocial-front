@@ -2,9 +2,7 @@
 @import "global/variables";
 @import "pages/Main";
 @import "components/Hero";
-@import "swiper/swiper.scss";
-
-
+@import "components/About";
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
@@ -67,11 +65,22 @@ body {
 }
 
 html {
-   // this defines what 1rem is --> font root size
-	 font-size: 62.5%; // 10/16, 1rem = 10px;
+  // this defines what 1rem is --> font root size
+	font-size: 62.5%; // 10/16, 1rem = 10px;
 
 	@include responsive(tab_port) {
 		font-size: 50%;
 	}
 }
+
+/* .container {
+  width: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: -3rem 13rem 0 13rem;
+  background-color: $color-white;
+  z-index: 3;
+  top: -50%;
+} */
 
