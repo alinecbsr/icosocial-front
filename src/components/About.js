@@ -1,9 +1,9 @@
 import React from 'react';
-import figure from '../assets/image/figure.svg';
+import figure from '../assets/image/imgAbout.svg';
 
 function About() {
   return (
-    <section className="container">
+    <section>
       <nav className="nav">
         <ul className="nav_list">
           <li className="nav_list-item">Sobre nós</li>
@@ -14,10 +14,10 @@ function About() {
           <li className="nav_list-item">FAQ</li>
         </ul>
       </nav>
-      <div className="main">
-        <article className="main_article">
-          <h2 className="main_article-title">Sobre nós</h2>
-          <p className="main_article-text">
+      <div className="about">
+        <article className="about_article">
+          <h2 className="about_article-title">Sobre nós</h2>
+          <p className="about_article-text">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc congue
             quis justo et ultricies. Etiam posuere nisl velit, eget dictum felis
             porttitor ac. Aenean leo dui, consectetur ut cursus non, blandit id
@@ -29,10 +29,12 @@ function About() {
             Curabitur quis gravida sapien, nec mattis mauris. Morbi vel commodo
             nisl. Sed tincidunt imperdiet dignissim...
           </p>
+          <button className="about_article-btn-about" type="submit">
+            Saiba mais
+          </button>
         </article>
-
-        <figure className="main_figure">
-          <img className="main_figure-img" src={figure} alt="figure" />
+        <figure className="about_fig">
+          <img className="about_fig-abt" src={figure} alt="figure" />
         </figure>
       </div>
     </section>

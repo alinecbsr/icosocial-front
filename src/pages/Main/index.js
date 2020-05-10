@@ -5,9 +5,10 @@ import About from '../../components/About';
 function Main() {
   return (
     <>
-      <Hero />;{/* <div className="container"> */}
-      <About />
-      {/* </div> */}
+      <Hero />;
+      <div className="container">
+        <About />
+      </div>
     </>
   );
 }

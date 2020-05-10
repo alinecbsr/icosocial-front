@@ -1,46 +1,296 @@
-.awssld {
-  height: 69rem;
-}
+.hero {
+  position: relative;
 
-.awssld__bullets {
-  padding-bottom: 12rem;
-  height: 0.5rem;
-  width: 0.5rem;
-  z-index: 2;
-}
+  .awssld {
+    width: 100%;
+    height: 69rem;
+    cursor: initial;
 
-.awssld__bullets button{
-  width: 0.5rem;
-  height: 0.5rem;
-}
+    &__bullets {
+      padding-bottom: 12rem;
+      height: 0.5rem;
+      width: 0.5rem;
+      z-index: 2;
 
-.banner {
+      & button {
+        width: 0.5rem;
+        height: 0.5rem;
+      }
+    }
+  }
+
+  .banner1 {
+    width: 100%;
+    height: 69rem;
+    cursor: initial;
+
+    &_img {
+      max-width: 100%;
+      max-height: 69rem;
+    }
+
+    &_hero {
+      top: -70em;
+      height: 101%;
+      display: flex;
+      position: relative;
+      flex-direction: column;
+      background: rgb(66, 70, 90);
+      background: linear-gradient(
+        90deg,
+        rgba(66, 70, 90, 0.5088410364145659) 0%,
+        rgba(161, 0, 255, 0.69) 100%
+      );
+    }
+
+    &_header {
+      height: 21rem;
+      display: flex;
+      padding: 0 11rem;
+      justify-content: space-between;
+
+      &-img {
+        padding-top: 4rem;
+
+        &-logo {
+          max-width: 26rem;
+        }
+      }
+
+      &-btn {
+        padding-top: 6rem;
+        display: flex;
+
+        &-rgt,
+        &-lgn {
+          width: 12rem;
+          height: 4rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 16px;
+          font-weight: 700;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          margin-left: 4rem;
+          color: $color-white;
+          background-color: transparent;
+          border: 1px solid transparent;
+          background: transparent;
+          border-radius: 8px;
+          transition: all 0.1s ease-in-out;
+          text-decoration: none;
+          cursor: pointer;
+
+          &-icon {
+            margin-right: 1rem;
+            font-size: 2rem;
+            color: $color-white;
+          }
+        }
+
+        &-rgt:hover,
+        &-lgn:hover {
+          transition: 400ms;
+          box-shadow: 0px 3px 6px rgba(49, 182, 39, 0.4);
+          border: 1px solid transparent;
+          background: transparent;
+          border-radius: 8px;
+        }
+      }
+    }
+
+    &_main {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      &-text1,
+      &-text2 {
+        margin: 0;
+        font-size: 4.8rem;
+        color: $color-white;
+        text-shadow: 0px 0px 5px $color-grey-medium;
+      }
+
+      &-text1 {
+        padding-left: 08rem;
+        padding-top: 22rem;
+      }
+
+      &-text2 {
+        padding-left: 14rem;
+      }
+    }
+  }
+
+  .banner2 {
+    width: 100%;
+    height: 69rem;
+    cursor: initial;
+
+    &_img {
+      padding-left: 23rem;
+    }
+
+    &_hero {
+      top: -82em;
+      height: 102%;
+      display: flex;
+      position: relative;
+      flex-direction: column;
+      background: rgb(255, 255, 255);
+      background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 1) 14%,
+        rgba(255, 255, 255, 0.9458158263305322) 23%,
+        rgba(255, 255, 255, 0.7609418767507002) 33%,
+        rgba(255, 255, 255, 0.4023984593837535) 46%,
+        rgba(255, 255, 255, 0) 100%
+      );
+    }
+
+    &_header {
+      height: 21rem;
+      display: flex;
+      padding: 0 11rem;
+      justify-content: space-between;
+
+      &-img {
+        padding-top: 4rem;
+
+        &-logo {
+          max-width: 26rem;
+        }
+      }
+
+      &-btn {
+        padding-top: 6rem;
+        display: flex;
+
+        &-rgt,
+        &-lgn {
+          width: 12rem;
+          height: 4rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 16px;
+          font-weight: 700;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          margin-left: 4rem;
+          color: $color-white;
+          text-shadow: 0px 0px 5px $color-grey-dark;
+          background-color: transparent;
+          border: 1px solid transparent;
+          background: transparent;
+          border-radius: 8px;
+          transition: all 0.1s ease-in-out;
+          text-decoration: none;
+          cursor: pointer;
+
+          &-icon {
+            margin-right: 1rem;
+            font-size: 2rem;
+            color: $color-white;
+          }
+        }
+
+        &-rgt:hover,
+        &-lgn:hover {
+          transition: 400ms;
+          box-shadow: 0px 3px 6px rgba(49, 182, 39, 0.4);
+          border: 1px solid transparent;
+          background: transparent;
+          border-radius: 8px;
+        }
+      }
+    }
+
+    &_main {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      &-text21,
+      &-text22,
+      &-text23,
+      &-text24 {
+        margin: 0;
+        font-size: 4.8rem;
+        color: $color-grey-dark;
+        text-shadow: 0px 0px 2px $color-grey-full;
+      }
+
+      &-text21 {
+        padding-left: 20rem;
+        padding-top: 8rem;
+      }
+
+      &-text22 {
+        text-transform: uppercase;
+        padding-left: 18rem;
+      }
+
+      &-text23 {
+        padding-left: 21rem;
+      }
+
+      &-text24 {
+        padding-left: 11rem;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .banner3 {
   width: 100%;
   height: 69rem;
-  display: flex;
-  flex-direction: column;
-  background-color: $color-grey-full;
+  cursor: initial;
+
+  &_img {
+    width: 100%;
+    margin-top: -20rem;
+  }
+
+  &_hero {
+    top: -77em;
+    height: 102%;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    background: rgb(196, 196, 196);
+    background: radial-gradient(
+      circle,
+      rgba(196, 196, 196, 0) 0%,
+      rgba(146, 147, 148, 0.8169642857142857) 100%
+    );
+  }
 
   &_header {
     height: 21rem;
     display: flex;
+    padding: 0 11rem ;
     justify-content: space-between;
-    padding-left: 16rem;
-    padding-right: 11rem;
 
-    &-img{
+    &-img {
       padding-top: 4rem;
 
-      &-logo{
-      max-width: 26rem;
+      &-logo {
+        max-width: 26rem;
       }
     }
 
     &-btn {
-      padding-top: 6rem;
+      padding-left: 9rem;
+      margin-top: 6rem;
       display: flex;
 
-      &-rgt, &-lgn {
+      &-rgt,
+      &-lgn {
         width: 12rem;
         height: 4rem;
         display: flex;
@@ -49,55 +299,69 @@
         font-size: 16px;
         font-weight: 700;
         letter-spacing: 1px;
-        border: none;
-        text-transform:uppercase;
+        text-transform: uppercase;
         margin-left: 4rem;
-        color: $color-grey-dark;
+        color: $color-white;
+        text-shadow: 0px 0px 5px $color-grey-dark;
         background-color: transparent;
-        transition: all 0.2s ease-in-out;
+        border: 1px solid transparent;
+        background: transparent;
+        border-radius: 8px;
+        transition: all 0.1s ease-in-out;
         text-decoration: none;
         cursor: pointer;
 
         &-icon {
           margin-right: 1rem;
           font-size: 2rem;
-          color: $color-grey-dark;
-        }
-
-        &-icon:hover {
           color: $color-white;
         }
       }
 
-      &-rgt:hover, &-lgn:hover {
-      transition: 400ms;
-      box-shadow: 0px 3px 6px rgba(213, 214, 214, 0.9);
-      border: 1px solid rgba(190, 190, 190, 0.5);
-      background: $color-grey-clear;
-      color: $color-white;
-      border-radius: 8px;
+      &-rgt:hover,
+      &-lgn:hover {
+        transition: 400ms;
+        box-shadow: 0px 3px 6px rgba(49, 182, 39, 0.4);
+        border: 1px solid transparent;
+        background: transparent;
+        border-radius: 8px;
       }
     }
   }
 
   &_main {
+    position: relative;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
 
-    &-text {
+    &-text31,
+    &-text32,
+    &-text33,
+    &-text34 {
       margin: 0;
-      padding-left: 14rem;
-      padding-top: 13rem;
       font-size: 4.8rem;
-      color: $color-grey-medium;
+      color: $color-white;
+      text-shadow: 2px 2px 5px $color-grey-dark;
     }
 
-    &-img {
-      width: 60rem;
-      padding-right: 10rem;
-      padding-bottom: 18rem;
+    &-text31 {
+      padding-top: 22rem;
     }
 
+    &-text32 {
+      text-transform: uppercase;
+    }
+
+    /*     &-text33 {
+      padding-left: 21rem;
+    }
+
+    &-text34 {
+      padding-left: 11rem;
+      text-transform: uppercase;
+    } */
   }
+  }
+
 }
