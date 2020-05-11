@@ -85,3 +85,23 @@ html {
   position: relative;
   z-index: 3;
 }
+
+// React Awasome Slide - CUSTOM
+.awssld {
+  width: 100%;
+  height: 69rem;
+  cursor: initial;
+
+  &__bullets {
+    padding-bottom: 12rem;
+    height: 0.5rem;
+    width: 0.5rem;
+    z-index: 2;
+    background: transparent;
+
+    & button {
+      width: 0.5rem;
+      height: 0.5rem;
+    }
+  }
+}
