@@ -1,35 +1,32 @@
 .hero {
   position: relative;
+  height: $dynamic-height;
 
   .banner1 {
     width: 100%;
-    height: 69rem;
+    height: $dynamic-height;
     cursor: initial;
 
     &_img {
-      max-width: 100%;
-      max-height: 69rem;
-    }
-
-    &_hero {
-      top: -70em;
-      height: 101%;
-      display: flex;
-      position: relative;
-      flex-direction: column;
-      background: rgb(66, 70, 90);
-      background: linear-gradient(
-        90deg,
-        rgba(66, 70, 90, 0.5088410364145659) 0%,
-        rgba(161, 0, 255, 0.69) 100%
-      );
+      width: 100%;
+      object-fit: cover;
+      height: $dynamic-height;
     }
 
     &_header {
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: 0;
       height: 21rem;
-      display: flex;
-      padding: 0 11rem;
-      justify-content: space-between;
+      z-index: 1;
+
+      &-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 11rem;
+      }
 
       &-img {
         padding-top: 4rem;
@@ -82,11 +79,33 @@
       }
     }
 
-    &_main {
-      position: relative;
+    &_hero {
+      width: 100%;
+      height: $dynamic-height;
       display: flex;
-      flex-direction: row;
-      justify-content: space-between;
+      position: absolute;
+      top: 0;
+      left: 0;
+      flex-direction: column;
+      background: linear-gradient(
+        90deg,
+        rgba(66, 70, 90, 0.5088410364145659) 0%,
+        rgba(161, 0, 255, 0.69) 100%
+      );
+    }
+
+    &_main {
+      width: 100%;
+      height: $dynamic-height;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+
+      & div:first-child {
+        position: absolute;
+        bottom: 15rem;
+        left: 0;
+      }
 
       &-text1,
       &-text2 {
@@ -113,7 +132,7 @@
     cursor: initial;
 
     &_img {
-      padding-left: 23rem;
+      width: 100%;
     }
 
     &_hero {
@@ -229,113 +248,112 @@
   }
 
   .banner3 {
-  width: 100%;
-  height: 69rem;
-  cursor: initial;
-
-  &_img {
     width: 100%;
-    margin-top: -20rem;
-  }
+    height: 69rem;
+    cursor: initial;
 
-  &_hero {
-    top: -77em;
-    height: 102%;
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    background: rgb(196, 196, 196);
-    background: radial-gradient(
-      circle,
-      rgba(196, 196, 196, 0) 0%,
-      rgba(146, 147, 148, 0.8169642857142857) 100%
-    );
-  }
-
-  &_header {
-    height: 21rem;
-    display: flex;
-    padding: 0 11rem ;
-    justify-content: space-between;
-
-    &-img {
-      padding-top: 4rem;
-
-      &-logo {
-        max-width: 26rem;
-      }
+    &_img {
+      width: 100%;
     }
 
-    &-btn {
-      padding-left: 9rem;
-      margin-top: 6rem;
+    &_hero {
+      top: -77em;
+      height: 102%;
       display: flex;
+      position: relative;
+      flex-direction: column;
+      background: rgb(196, 196, 196);
+      background: radial-gradient(
+        circle,
+        rgba(196, 196, 196, 0) 0%,
+        rgba(146, 147, 148, 0.8169642857142857) 100%
+      );
+    }
 
-      &-rgt,
-      &-lgn {
-        width: 12rem;
-        height: 4rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 16px;
-        font-weight: 700;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        margin-left: 4rem;
-        color: $color-white;
-        text-shadow: 0px 0px 5px $color-grey-dark;
-        background-color: transparent;
-        border: 1px solid transparent;
-        background: transparent;
-        border-radius: 8px;
-        transition: all 0.1s ease-in-out;
-        text-decoration: none;
-        cursor: pointer;
+    &_header {
+      height: 21rem;
+      display: flex;
+      padding: 0 11rem;
+      justify-content: space-between;
 
-        &-icon {
-          margin-right: 1rem;
-          font-size: 2rem;
-          color: $color-white;
+      &-img {
+        padding-top: 4rem;
+
+        &-logo {
+          max-width: 26rem;
         }
       }
 
-      &-rgt:hover,
-      &-lgn:hover {
-        transition: 400ms;
-        box-shadow: 0px 3px 6px rgba(49, 182, 39, 0.4);
-        border: 1px solid transparent;
-        background: transparent;
-        border-radius: 8px;
+      &-btn {
+        padding-left: 9rem;
+        margin-top: 6rem;
+        display: flex;
+
+        &-rgt,
+        &-lgn {
+          width: 12rem;
+          height: 4rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 16px;
+          font-weight: 700;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          margin-left: 4rem;
+          color: $color-white;
+          text-shadow: 0px 0px 5px $color-grey-dark;
+          background-color: transparent;
+          border: 1px solid transparent;
+          background: transparent;
+          border-radius: 8px;
+          transition: all 0.1s ease-in-out;
+          text-decoration: none;
+          cursor: pointer;
+
+          &-icon {
+            margin-right: 1rem;
+            font-size: 2rem;
+            color: $color-white;
+          }
+        }
+
+        &-rgt:hover,
+        &-lgn:hover {
+          transition: 400ms;
+          box-shadow: 0px 3px 6px rgba(49, 182, 39, 0.4);
+          border: 1px solid transparent;
+          background: transparent;
+          border-radius: 8px;
+        }
       }
     }
-  }
 
-  &_main {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    &_main {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
 
-    &-text31,
-    &-text32,
-    &-text33,
-    &-text34 {
-      margin: 0;
-      font-size: 4.8rem;
-      color: $color-white;
-      text-shadow: 2px 2px 5px $color-grey-dark;
-    }
+      &-text31,
+      &-text32,
+      &-text33,
+      &-text34 {
+        margin: 0;
+        font-size: 4.8rem;
+        color: $color-white;
+        text-shadow: 2px 2px 5px $color-grey-dark;
+      }
 
-    &-text31 {
-      padding-top: 22rem;
-    }
+      &-text31 {
+        padding-top: 22rem;
+      }
 
-    &-text32 {
-      text-transform: uppercase;
-    }
+      &-text32 {
+        text-transform: uppercase;
+      }
 
-    /*     &-text33 {
+      /*     &-text33 {
       padding-left: 21rem;
     }
 
@@ -343,7 +361,6 @@
       padding-left: 11rem;
       text-transform: uppercase;
     } */
+    }
   }
-  }
-
 }

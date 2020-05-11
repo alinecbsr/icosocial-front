@@ -5,7 +5,7 @@ import About from '../../components/About';
 function Main() {
   return (
     <>
-      <Hero />;
+      <Hero />
       <div className="container">
         <About />
       </div>
