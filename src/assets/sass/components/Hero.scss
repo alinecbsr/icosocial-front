@@ -1,24 +1,6 @@
 .hero {
   position: relative;
 
-  .awssld {
-    width: 100%;
-    height: 69rem;
-    cursor: initial;
-
-    &__bullets {
-      padding-bottom: 12rem;
-      height: 0.5rem;
-      width: 0.5rem;
-      z-index: 2;
-
-      & button {
-        width: 0.5rem;
-        height: 0.5rem;
-      }
-    }
-  }
-
   .banner1 {
     width: 100%;
     height: 69rem;
