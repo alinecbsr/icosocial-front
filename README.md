@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img alt="Icó Social" src=".github/logo.png" width="300px" />
+    <img alt="Icó Social" src=".github/logo1.png" width="300px" />
 </h1>
 
 <h4 align="center">
@@ -34,6 +34,7 @@ This project was developed with the following technologies:
   <li><a href="https://sass-lang.com/">Sass</a></li>
   <li><a href="https://reacttraining.com/react-router/">React Router DOM</a></li>
   <li><a href="https://fullpage.caferati.me/">React Awesome Slider</a></li>
+  <li><a href="https://reactjs.org/docs/context.html">React Context</a></li>
 </ul>
 
 ## :computer: Project

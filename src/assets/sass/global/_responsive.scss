@@ -20,7 +20,7 @@
   }
 
   @if $breakpoint == lg_desktop {
-    @media only screen and (max-width: 102em) {  // 1633px
+    @media only screen and (max-width: 128rem) {  // 1633px
       @content
     };
   }

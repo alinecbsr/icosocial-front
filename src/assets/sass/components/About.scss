@@ -1,0 +1,102 @@
+.nav {
+  width: 100%;
+
+  &_list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 13rem;
+    list-style: none;
+    margin: 0;
+
+    &-item {
+      border-bottom: 0.3rem solid transparent;
+      color: $color-purple-dark;
+      text-transform: uppercase;
+      letter-spacing: 0.1rem;
+      padding-bottom: 1rem;
+      font-size: 1.8rem;
+      line-height: 2rem;
+      font-weight: 400;
+      cursor: pointer;
+    }
+
+    &-item:hover {
+      color: $color-grey-medium;
+      border-bottom: 0.3rem solid $color-green-full;
+    }
+  }
+}
+
+.about {
+  width: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 6rem;
+
+  &_article {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &-title {
+      margin: 0;
+      font-weight: 400;
+      font-size: 4.8rem;
+      color: $color-grey-dark;
+      text-transform: uppercase;
+    }
+
+    &-text {
+      color: $color-grey-dark;
+      font-size: 1.8rem;
+      font-weight: 300;
+    }
+
+    &-btn-about {
+      width: 20rem;
+      height: 4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-top: 4rem;
+      color: $color-purple-clear;
+      background-color: transparent;
+      border: 2px solid $color-grey-full;
+      box-shadow: 2px 3px 6px $color-grey-clear;
+      background: transparent;
+      border-radius: 10rem;
+      transition: all 0.3s ease-in-out;
+      text-decoration: none;
+      outline: none;
+      cursor: pointer;
+    }
+
+    &-btn-about:hover {
+      transition: 400ms;
+      box-shadow: 2px 3px 6px rgba(49, 182, 39, 0.4);
+      border: 2px solid $color-grey-full;
+      background: transparent;
+      border-radius: 10rem;
+    }
+
+    &_fig {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+
+      &-abt {
+        margin-left: 4rem;
+      }
+    }
+  }
+}

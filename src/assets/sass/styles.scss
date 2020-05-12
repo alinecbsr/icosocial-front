@@ -1,10 +1,11 @@
 @import "global/responsive";
 @import "global/variables";
+@import "global/placeholders";
+
 @import "pages/Main";
+
 @import "components/Hero";
-@import "swiper/swiper.scss";
-
-
+@import "components/About";
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
@@ -64,14 +65,44 @@ body {
 	padding: 0;
   border: 0;
   outline: 0;
+  position: relative;
 }
 
 html {
-   // this defines what 1rem is --> font root size
-	 font-size: 62.5%; // 10/16, 1rem = 10px;
+  // this defines what 1rem is --> font root size
+	font-size: 62.5%; // 10/16, 1rem = 10px;
 
 	@include responsive(tab_port) {
 		font-size: 50%;
 	}
 }
 
+.container {
+  width: 70%;
+  max-width: 128rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+// React Awasome Slide - CUSTOM
+.awssld {
+  width: 100%;
+  height: $dynamic-height;
+  cursor: initial;
+
+  &__bullets {
+    padding-bottom: 12rem;
+    height: 0.5rem;
+    width: 0.5rem;
+    z-index: 2;
+    background: transparent;
+
+    & button {
+      width: 0.5rem;
+      height: 0.5rem;
+    }
+  }
+}
