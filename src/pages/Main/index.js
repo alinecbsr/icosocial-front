@@ -6,8 +6,8 @@ import Definitions from '../../components/Definitions';
 function Main() {
   return (
     <>
-      <Hero />;
-      <div className="container">
+      <Hero />
+      <div className="container content">
         <About />
         <Definitions />
       </div>
