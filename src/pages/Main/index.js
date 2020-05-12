@@ -6,7 +6,7 @@ function Main() {
   return (
     <>
       <Hero />
-      <div className="container">
+      <div className="container content">
         <About />
       </div>
     </>
