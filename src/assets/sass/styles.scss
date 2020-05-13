@@ -58,16 +58,15 @@
 }
 
 body {
-	box-sizing: border-box;
 	font-family: 'Poppins', sans-serif;
   background-color: $color-grey-full;
+  -webkit-font-smoothing: antialiased;
   vertical-align: baseline;
   box-sizing: border-box;
   margin: 0;
 	padding: 0;
   border: 0;
   outline: 0;
-  position: relative;
 }
 
 html {
@@ -93,30 +92,30 @@ html {
   cursor: initial;
 
   &__bullets {
-    padding-bottom: 14rem;
-    height: 0.5rem;
-    width: 0.5rem;
+    padding-bottom: 13rem;
+    height: 0.3rem;
+    width: 0.3rem;
     z-index: 2;
     background: transparent;
 
     & button {
-      width: 0.5rem;
-      height: 0.5rem;
+      width: 0.2rem;
+      height: 0.2rem;
     }
   }
 }
 
 .container {
-  z-index: 2;
-  width: 100%;
+  z-index: 3;
+  width: 85%;
   max-width: 128rem;
-  min-width: 32rem;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  margin-top: -3rem;
-  background-color: #e20d0d;
+  background-color: $color-white;
+  margin: 0;
+  padding: 0;
 }
