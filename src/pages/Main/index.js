@@ -7,10 +7,8 @@ function Main() {
   return (
     <>
       <Hero />
-      <div className="container content">
-        <About />
-        <Definitions />
-      </div>
+      <div className="container">{/* <About />
+        <Definitions /> */}</div>
     </>
   );
 }

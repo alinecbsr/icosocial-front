@@ -79,24 +79,21 @@ html {
 	}
 }
 
-.container {
-  width: 70%;
-  max-width: 128rem;
-  height: 100%;
+.App {
+  width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
 }
 
 // React Awasome Slide - CUSTOM
 .awssld {
   width: 100%;
-  height: $dynamic-height;
+  height: 100vh;
   cursor: initial;
 
   &__bullets {
-    padding-bottom: 12rem;
+    padding-bottom: 14rem;
     height: 0.5rem;
     width: 0.5rem;
     z-index: 2;
@@ -107,4 +104,19 @@ html {
       height: 0.5rem;
     }
   }
+}
+
+.container {
+  z-index: 2;
+  width: 100%;
+  max-width: 128rem;
+  min-width: 32rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: -3rem;
+  background-color: #e20d0d;
 }

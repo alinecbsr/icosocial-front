@@ -3,7 +3,7 @@ import figure from '../assets/image/imgAbout.svg';
 
 function About() {
   return (
-    <section>
+    <section className="container">
       <nav className="nav">
         <ul className="nav_list">
           <li className="nav_list-item">Sobre nós</li>
@@ -33,9 +33,9 @@ function About() {
             Saiba mais
           </button>
         </article>
-        <figure className="about_fig">
+        {/*         <figure className="about_fig">
           <img className="about_fig-abt" src={figure} alt="figure" />
-        </figure>
+        </figure> */}
       </div>
     </section>
   );
