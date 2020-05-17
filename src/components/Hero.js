@@ -3,7 +3,7 @@ import AwesomeSlider from 'react-awesome-slider';
 import withAutoplay from 'react-awesome-slider/dist/autoplay';
 import 'react-awesome-slider/dist/styles.css';
 
-import Banner from './hero/Banner';
+import Banner from './Banner';
 
 import logo1 from '../assets/image/logo1.svg';
 import logo3 from '../assets/image/logo3.svg';
