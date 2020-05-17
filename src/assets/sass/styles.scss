@@ -59,7 +59,8 @@
 
 body {
 	font-family: 'Poppins', sans-serif;
-  background-color: $color-grey-full;
+  background-color: $color-grey-clear;
+  text-rendering: optimizelegibility;
   -webkit-font-smoothing: antialiased;
   vertical-align: baseline;
   box-sizing: border-box;
@@ -71,7 +72,9 @@ body {
 
 html {
   // this defines what 1rem is --> font root size
-	font-size: 62.5%; // 10/16, 1rem = 10px;
+  font-size: 62.5%; // 10/16, 1rem = 10px;
+  text-rendering: optimizelegibility;
+  -webkit-font-smoothing: antialiased;
 
 	@include responsive(tab_port) {
 		font-size: 50%;
@@ -92,7 +95,7 @@ html {
   cursor: initial;
 
   &__bullets {
-    padding-bottom: 13rem;
+    padding-bottom: 14rem;
     height: 0.3rem;
     width: 0.3rem;
     z-index: 2;
