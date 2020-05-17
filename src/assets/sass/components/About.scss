@@ -1,6 +1,8 @@
 .nav {
   width: 100%;
   max-width: 128rem;
+  height: auto;
+  z-index: 3;
   display: flex;
   justify-content: center;
   background-color: $color-white;
@@ -48,7 +50,7 @@
 .about {
   width: 100%;
   max-width: 99%;
-  height: 100%;
+  height: auto;
   display: flex;
   flex-wrap: wrap-reverse;
   flex-direction: row;
@@ -57,6 +59,7 @@
 
   &_article {
     max-width: 61rem;
+    height: auto;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -113,24 +116,23 @@
       background: transparent;
       border-radius: 10rem;
     }
-
   }
-    &_fig {
-      margin: 0;
-      margin-top: 4rem;
 
-      &-abt {
-        width: 100%;
-       /*  order: 2; */
+  &_fig {
+    margin: 0;
+    height: auto;
+    margin-top: 4rem;
 
-        @include responsive(tab_medium) {
-          max-width: 32rem;
-        }
+    &-abt {
+      width: 100%;
 
-        @include responsive(phone) {
-          max-width: 32rem;
-          /* order: -1; */
-        }
+      @include responsive(tab_medium) {
+        max-width: 32rem;
+      }
+
+      @include responsive(phone) {
+        max-width: 32rem;
       }
     }
+  }
 }
