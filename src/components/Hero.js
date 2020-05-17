@@ -3,10 +3,14 @@ import AwesomeSlider from 'react-awesome-slider';
 import withAutoplay from 'react-awesome-slider/dist/autoplay';
 import 'react-awesome-slider/dist/styles.css';
 
-import Banner from './hero/Banner';
+import Banner from './Banner';
 
 import logo1 from '../assets/image/logo1.svg';
 import logo3 from '../assets/image/logo3.svg';
+import logo7 from '../assets/image/logo7.svg';
+import imgHero1 from '../assets/image/imgHero1.svg';
+import imgHero2 from '../assets/image/imgHero2.svg';
+import imgHero3 from '../assets/image/imgHero3.svg';
 
 const AutoplaySlider = withAutoplay(AwesomeSlider);
 
@@ -14,7 +18,7 @@ function Hero() {
   return (
     <div className="hero">
       <AutoplaySlider
-        play={false}
+        play
         organicArrows={false}
         cancelOnInteraction={false}
         interval={3000}
@@ -23,46 +27,48 @@ function Hero() {
           <Banner
             logo={logo1}
             gradientClass="banner-one-gradient"
-            image="https://cdn.pixabay.com/photo/2014/04/05/11/40/connect-316638_960_720.jpg"
+            image={imgHero1}
           >
             <div className="banner-one-main">
               <div>
-                <p className="banner-one-main-text31">Conectando pessoas...</p>
-                <p className="banner-one-main-text32">Tansformando vidas!</p>
+                <p className="banner-one-main-text31">
+                  Conectando pessoas e transformando vidas
+                </p>
               </div>
             </div>
           </Banner>
         </div>
+
         <div className="banner">
           <Banner
             logo={logo3}
             gradientClass="banner-two-gradient"
-            image="https://cdn.pixabay.com/photo/2014/04/02/14/48/children-306607_960_720.jpg"
+            image={imgHero2}
           >
             <div className="banner-two-main">
               <p>
                 <span className="banner-two-main-text1">
-                  Conectando pessoas...
+                  A boa educação, afetiva, direciona...
                 </span>
                 <span className="banner-two-main-text2">
-                  Tansformando vidas!
+                  inspira, transforma, torna-se efetiva!
                 </span>
               </p>
             </div>
           </Banner>
         </div>
+
         <div className="banner">
           <Banner
             gradientClass="banner-three-gradient"
-            logo={logo1}
-            image="https://cdn.pixabay.com/photo/2014/11/22/17/58/clasped-hands-541849_960_720.jpg"
+            logo={logo7}
+            image={imgHero3}
           >
             <div className="banner-three-main">
               <div>
-                <p className="banner-three-main-text21">Juntos...</p>
-                <p className="banner-three-main-text22">podemos</p>
-                <p className="banner-three-main-text23">muito +</p>
-                <p className="banner-three-main-text24">Junte-se a nós!</p>
+                <p className="banner-three-main-text22">
+                  Junte-se a nós! Faça parte!
+                </p>
               </div>
             </div>
           </Banner>

@@ -3,7 +3,7 @@ import figure from '../assets/image/imgAbout.svg';
 
 function About() {
   return (
-    <section>
+    <section className="container">
       <nav className="nav">
         <ul className="nav_list">
           <li className="nav_list-item">Sobre nós</li>
