@@ -1,0 +1,161 @@
+.storyTitle {
+  text-align: center;
+  font-weight: 400;
+  font-size: 4.8rem;
+  color: $color-grey-dark;
+  text-transform: uppercase;
+}
+
+.story {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+
+  @include responsive(tab_medium) {
+    justify-content: center;
+  }
+
+  &_column {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &_space1 {
+    width: 100%;
+    max-width: 43rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+
+    @include responsive(phone) {
+      max-width: 30rem;
+    }
+
+    &-icon {
+      display: none;
+
+      @include responsive(tab_medium) {
+      width: 100%;
+      height: auto;
+      display: flex;
+      justify-content: center;
+      }
+
+      &-figure {
+        width: 10rem;
+        height: 10rem;
+        margin: 3rem;
+
+        @include responsive(tab_medium) {
+          width: 10rem;
+          height: 10rem;
+        }
+
+        @include responsive(phone) {
+          width: 7rem;
+          height: 7rem;
+        }
+      }
+    }
+
+    h3 {
+      font-size: 2.8rem;
+      color: $color-purple-dark;
+
+      @include responsive(tab_medium) {
+        text-align: center;
+      }
+    }
+
+    p {
+    font-size: 1.8rem;
+    line-height: 2.7rem;
+    text-align: justify;
+    text-indent: 3rem;
+    color: $color-grey-dark;
+    }
+  }
+
+  &_lineTime{
+    width: auto;
+    height: 100%;
+    display: flex;
+
+    @include responsive(tab_medium) {
+      display: none;
+    }
+
+    @include responsive(phone) {
+      display: none;
+    }
+
+  }
+
+  &_space2 {
+    width: 100%;
+    max-width: 43rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+    padding-top: 7rem;
+
+    @include responsive(tab_medium) {
+      padding-top: none;
+    }
+
+    @include responsive(phone) {
+      max-width: 30rem;
+    }
+
+    &-icon {
+      display: none;
+
+      @include responsive(tab_medium) {
+      width: 100%;
+      height: auto;
+      display: flex;
+      justify-content: center;
+      }
+
+      &-figure {
+        width: 10rem;
+        height: 10rem;
+        margin: 3rem;
+
+        @include responsive(tab_medium) {
+          width: 10rem;
+          height: 10rem;
+        }
+
+        @include responsive(phone) {
+          width: 7rem;
+          height: 7rem;
+        }
+      }
+    }
+
+    h3 {
+      font-size: 2.8rem;
+      color: $color-purple-dark;
+
+      @include responsive(tab_medium) {
+        text-align: center;
+      }
+    }
+
+    p {
+    font-size: 1.8rem;
+    line-height: 2.7rem;
+    text-align: justify;
+    text-indent: 3rem;
+    color: $color-grey-dark;
+    }
+  }
+}
