@@ -7,6 +7,7 @@
 @import 'components/Hero';
 @import 'components/About';
 @import 'components/Definitions';
+@import 'components/OurStory';
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
@@ -198,7 +199,7 @@ html {
   flex-wrap: wrap;
   background-color: $color-white;
   margin: 0;
-  padding: 0;
+  padding-top: 4rem;
   box-shadow:
   0 -6px white,
   0 6px white,
