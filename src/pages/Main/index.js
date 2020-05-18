@@ -1,10 +1,11 @@
 import React, { createRef } from 'react';
 import Hero from '../../components/Hero';
-import NavBar from '../../components/NavBar';
-import About from '../../components/About';
-import Definitions from '../../components/Definitions';
-import OurStory from '../../components/OurStory';
 import FAQ from '../../components/Faq';
+import About from '../../components/About';
+import NavBar from '../../components/NavBar';
+import Footer from '../../components/Footer';
+import OurStory from '../../components/OurStory';
+import Definitions from '../../components/Definitions';
 
 function Main() {
   const aboutRef = createRef();
@@ -21,6 +22,7 @@ function Main() {
       <Definitions rfs={missionRef} />
       <OurStory />
       <FAQ rfs={faqRef} />
+      <Footer />
     </>
   );
 }

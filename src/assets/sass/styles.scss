@@ -10,8 +10,7 @@
 @import 'components/OurStory';
 @import 'components/NavBar';
 @import 'components/Faq';
-
-
+@import "components/Footer";
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
@@ -160,9 +159,13 @@ html {
   text-rendering: optimizelegibility;
   -webkit-font-smoothing: antialiased;
 
-  @include responsive(tab_port) {
-    font-size: 50%;
+	@include responsive(tab_port) {
+		font-size: 50%;
   }
+
+  @include responsive(phone) {
+		font-size: 40%;
+	}
 }
 
 .App {
