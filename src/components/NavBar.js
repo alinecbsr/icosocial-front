@@ -1,43 +1,55 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import React from 'react';
-import { Link } from 'react-router-dom';
 
-function About() {
+function NavBar({ rfs }) {
+  const { aboutRef, missionRef } = rfs;
   const list = [
     {
       item: 'Sobre nós',
-      link: '/about_us',
+      link: aboutRef,
     },
     {
       item: 'O que fazemos',
-      link: '#what_we_do',
+      link: missionRef,
     },
     {
       item: 'Por quem fazemos',
-      link: '#why_we_do',
+      link: null,
     },
     {
       item: 'Participe',
-      link: '#participate',
+      link: null,
     },
     {
       item: 'Parceiros',
-      link: '#partners',
+      link: null,
     },
     {
       item: 'FAQ',
-      link: '#faq',
+      link: null,
     },
   ];
+
+  const goTo = (item) => {
+    const { link } = item;
+    if (link) {
+      link.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <section className="container">
       <nav className="nav">
         <ul className="nav_list">
           {list.map((item) => (
-            <li className="nav_list-item" key={Math.random()}>
-              <Link className="nav_list-item" to={item.link}>
-                {item.item}
-              </Link>
+            <li
+              className="nav_list-item"
+              key={Math.random()}
+              onClick={goTo.bind(this, item)}
+            >
+              {item.item}
             </li>
           ))}
         </ul>
@@ -46,4 +58,4 @@ function About() {
   );
 }
 
-export default About;
+export default NavBar;

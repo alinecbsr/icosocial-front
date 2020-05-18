@@ -1,10 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import figure from '../assets/image/imgAbout.svg';
 
-function About() {
+function About(props) {
   return (
-    <section className="container">
+    <section ref={props.rfs} className="container">
       <div className="about">
         <article className="about_article">
           <h2 className="about_article-title">Sobre nós</h2>
