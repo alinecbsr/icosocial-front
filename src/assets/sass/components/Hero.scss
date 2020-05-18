@@ -24,6 +24,10 @@
     width: 70%;
     height: 21rem;
 
+    @include responsive(phone) {
+      display: none;
+    }
+
     &-container {
       max-width: 128rem;
       display: flex;
@@ -50,6 +54,7 @@
         width: 12rem;
         height: 4rem;
         display: flex;
+        padding: 0.5rem;
         align-items: center;
         justify-content: center;
         font-size: 16px;
@@ -77,7 +82,7 @@
           transition: 400ms;
           box-shadow: 0px 3px 6px rgba(49, 182, 39, 0.4);
           border: 1px solid transparent;
-          background: transparent;
+          background: $color-green-full;
           border-radius: 8px;
         }
       }
@@ -119,6 +124,11 @@
     font-weight: 600;
     color: $color-purple-dark;
     text-shadow: 1px 1px 3px $color-grey-dark;
+
+    @include responsive(phone) {
+      text-align: center;
+      font-size: 2.4rem;
+    }
   }
 }
 
@@ -137,6 +147,10 @@
     flex-direction: column;
     position: absolute;
     bottom: 20%;
+
+    @include responsive(phone) {
+      justify-content: center;
+    }
   }
 
   &-text1,
@@ -146,10 +160,20 @@
     font-weight: 400;
     color: $color-white;
     text-shadow: 0px 0px 3px $color-grey-medium;
+
+    @include responsive(phone) {
+      font-size: 2.8rem;
+      justify-content: center;
+    }
   }
 
   &-text2 {
     padding-left: 5rem;
+
+    @include responsive(phone) {
+      padding: 0;
+      margin: 0;
+    }
   }
 }
 
@@ -158,16 +182,20 @@
   height: 100vh;
   margin: 0 auto;
   display: flex;
+  justify-content: center;
   align-items: center;
-  flex-direction: column;
   max-width: 128rem;
   position: relative;
 
   & div:first-child {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     position: absolute;
     bottom: 50%;
+
+    @include responsive(phone) {
+      text-align: center;
+    }
   }
 
   &-text22 {
@@ -176,6 +204,10 @@
     font-weight: 700;
     color: $color-white;
     text-shadow: 0px 0px 3px $color-grey-dark;
+
+    @include responsive(phone) {
+      font-size: 2.8rem;
+    }
   }
 }
 

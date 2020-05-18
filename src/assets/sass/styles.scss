@@ -1,34 +1,103 @@
-@import "global/responsive";
-@import "global/variables";
-@import "global/placeholders";
+@import 'global/variables';
+@import 'global/responsive';
+@import 'global/placeholders';
 
-@import "pages/Main";
+@import 'pages/Main';
 
-@import "components/Hero";
-@import "components/About";
-@import "components/Definitions";
-@import "components/Partners";
+@import 'components/Faq';
+@import 'components/Hero';
+@import 'components/About';
 @import "components/Footer";
-
+@import 'components/NavBar';
+@import 'components/OurStory';
+@import "components/Partners";
+@import 'components/Definitions';
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
 /* GLOBAL RESET */
-:global(html), :global(div), :global(span), :global(applet), :global(object), :global(iframe),
-:global(h1), :global(h2), :global(h3), :global(h4), :global(h5), :global(h6), :global(p), :global(blockquote), :global(pre),
-:global(a), :global(abbr), :global(acronym), :global(address), :global(big), :global(cite), :global(code),
-:global(del), :global(dfn), :global(em), :global(img), :global(ins), :global(kbd), :global(q), :global(s), :global(samp),
-:global(small), :global(strike), :global(strong), :global(sub), :global(sup), :global(tt), :global(var),
-:global(b), :global(u), :global(i), :global(center),
-:global(dl), :global(dt), :global(dd), :global(ol), :global(ul), :global(li),
-:global(fieldset), :global(form), :global(label), :global(legend),
-:global(table), :global(caption), :global(tbody), :global(tfoot), :global(thead), :global(tr), :global(th), :global(td),
-:global(article), :global(aside), :global(canvas), :global(details), :global(embed),
-:global(figure), :global(figcaption), :global(footer), :global(header), :global(hgroup),
-:global(menu), :global(nav), :global(output), :global(ruby), :global(section), :global(summary),
-:global(time), :global(mark), :global(audio), :global(video) {
-	margin: 0;
-	padding: 0;
+:global(html),
+:global(div),
+:global(span),
+:global(applet),
+:global(object),
+:global(iframe),
+:global(h1),
+:global(h2),
+:global(h3),
+:global(h4),
+:global(h5),
+:global(h6),
+:global(p),
+:global(blockquote),
+:global(pre),
+:global(a),
+:global(abbr),
+:global(acronym),
+:global(address),
+:global(big),
+:global(cite),
+:global(code),
+:global(del),
+:global(dfn),
+:global(em),
+:global(img),
+:global(ins),
+:global(kbd),
+:global(q),
+:global(s),
+:global(samp),
+:global(small),
+:global(strike),
+:global(strong),
+:global(sub),
+:global(sup),
+:global(tt),
+:global(var),
+:global(b),
+:global(u),
+:global(i),
+:global(center),
+:global(dl),
+:global(dt),
+:global(dd),
+:global(ol),
+:global(ul),
+:global(li),
+:global(fieldset),
+:global(form),
+:global(label),
+:global(legend),
+:global(table),
+:global(caption),
+:global(tbody),
+:global(tfoot),
+:global(thead),
+:global(tr),
+:global(th),
+:global(td),
+:global(article),
+:global(aside),
+:global(canvas),
+:global(details),
+:global(embed),
+:global(figure),
+:global(figcaption),
+:global(footer),
+:global(header),
+:global(hgroup),
+:global(menu),
+:global(nav),
+:global(output),
+:global(ruby),
+:global(section),
+:global(summary),
+:global(time),
+:global(mark),
+:global(audio),
+:global(video) {
+  margin: 0;
+  padding: 0;
   border: 0;
   outline: 0;
   vertical-align: baseline;
@@ -36,37 +105,51 @@
 }
 
 /* HTML5 display-role reset for older browsers */
-:global(article), :global(aside), :global(details), :global(figcaption), :global(figure),
-:global(footer), :global(header), :global(hgroup), :global(menu), :global(nav), :global(section) {
-	display: block;
+:global(article),
+:global(aside),
+:global(details),
+:global(figcaption),
+:global(figure),
+:global(footer),
+:global(header),
+:global(hgroup),
+:global(menu),
+:global(nav),
+:global(section) {
+  display: block;
 }
 :global(body) {
-	line-height: 1;
+  line-height: 1;
 }
-:global(ol), :global(ul) {
-	list-style: none;
+:global(ol),
+:global(ul) {
+  list-style: none;
 }
-:global(blockquote), :global(q) {
-	quotes: none;
+:global(blockquote),
+:global(q) {
+  quotes: none;
 }
-:global(blockquote:before), :global(blockquote:after),
-:global(q:before), :global(q:after) {
-	content: '';
-	content: none;
+:global(blockquote:before),
+:global(blockquote:after),
+:global(q:before),
+:global(q:after) {
+  content: '';
+  content: none;
 }
 :global(table) {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 body {
-	font-family: 'Poppins', sans-serif;
-  background-color: $color-grey-full;
+  font-family: 'Poppins', sans-serif;
+  background-color: $color-white;
+  text-rendering: optimizelegibility;
   -webkit-font-smoothing: antialiased;
   vertical-align: baseline;
   box-sizing: border-box;
   margin: 0;
-	padding: 0;
+  padding: 0;
   border: 0;
   outline: 0;
 }
@@ -74,6 +157,8 @@ body {
 html {
   // this defines what 1rem is --> font root size
   font-size: 62.5%; // 10/16, 1rem = 10px;
+  text-rendering: optimizelegibility;
+  -webkit-font-smoothing: antialiased;
 
 	@include responsive(tab_port) {
 		font-size: 50%;
@@ -98,7 +183,7 @@ html {
   cursor: initial;
 
   &__bullets {
-    padding-bottom: 13rem;
+    padding-bottom: 14rem;
     height: 0.3rem;
     width: 0.3rem;
     z-index: 2;
@@ -112,7 +197,6 @@ html {
 }
 
 .container {
-  z-index: 3;
   width: 85%;
   max-width: 128rem;
   height: 100%;
@@ -123,5 +207,10 @@ html {
   flex-wrap: wrap;
   background-color: $color-white;
   margin: 0;
-  padding: 0;
+  padding-top: 4rem;
+  box-shadow:
+  0 -6px white,
+  0 6px white,
+  -7px 0 4px -3px rgba(0, 0, 0, 0.1),
+  7px 0 4px -3px rgba(0, 0, 0, 0.1);
 }
