@@ -7,6 +7,7 @@
 @import "components/Hero";
 @import "components/About";
 @import "components/Definitions";
+@import "components/Partners";
 @import "components/Footer";
 
 
@@ -72,7 +73,7 @@ body {
 
 html {
   // this defines what 1rem is --> font root size
-	font-size: 62.5%; // 10/16, 1rem = 10px;
+  font-size: 62.5%; // 10/16, 1rem = 10px;
 
 	@include responsive(tab_port) {
 		font-size: 50%;
