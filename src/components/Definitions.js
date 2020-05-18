@@ -1,8 +1,8 @@
 import React from 'react';
 
-function Definitions() {
+function Definitions({ rfs }) {
   return (
-    <section className="container">
+    <section ref={rfs} className="container">
       <div className="define">
         <div className="card">
           <h2 className="card_title">Missão</h2>
