@@ -4,6 +4,7 @@ import NavBar from '../../components/NavBar';
 import About from '../../components/About';
 import Definitions from '../../components/Definitions';
 import OurStory from '../../components/OurStory';
+import FAQ from '../../components/Faq';
 
 function Main() {
   const aboutRef = createRef();
@@ -17,6 +18,7 @@ function Main() {
       <About rfs={aboutRef} />
       <Definitions rfs={missionRef} />
       <OurStory />
+      <FAQ />
     </>
   );
 }
