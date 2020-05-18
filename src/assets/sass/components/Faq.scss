@@ -1,0 +1,98 @@
+.faq {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: $color-white;
+
+  .faq_header {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    text-align: center;
+    font-weight: 400;
+    font-size: 4.8rem;
+    color: $color-grey-dark;
+    text-transform: uppercase;
+  }
+
+  .faq_list {
+    width: 100%;
+    max-width: 95rem;
+    list-style-type: none;
+    padding: 7rem 0;
+
+    @include responsive(tab_medium) {
+      max-width: 80%;
+    }
+
+    @include responsive(phone) {
+      max-width: 90%;
+    }
+
+    &-item {
+      border-top-width: 1px;
+      border-top-style: solid;
+      border-top-color: $color-grey-blue;
+      border-bottom-width: 1px;
+      border-bottom-style: solid;
+      border-bottom-color: $color-grey-blue;
+      background: $color-grey-weak;
+      width: 100%;
+
+      summary::-webkit-details-marker {
+        display: none;
+      }
+
+      summary:after {
+        background: transparent;
+        content: '►';
+        color: $color-grey-medium;
+        float: right;
+        text-align: center;
+        /* font-size: x-large; */
+        font-weight: 300;
+        padding: 0;
+        width: 1rem;
+      }
+
+      details[open] summary:after {
+        content: '▼';
+        float: right;
+       /*  font-size: x-large; */
+        font-weight: 300;
+        text-align: center;
+        width: 1rem;
+      }
+    }
+
+    &-details {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &-question {
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: $color-green-full;
+      padding: 2rem;
+      outline: none;
+    }
+
+    &-answer {
+      font-size: 1.4rem;
+      /* font-family: var( --nunito-regular); */
+      background-color: $color-white;
+      color: $color-grey-clear;
+      border-top: solid 0.1rem $color-grey-blue;
+      white-space: pre-line;
+      line-height: 2.5rem;
+      text-align: justify;
+      text-indent: 3rem;
+      padding: 3%;
+      margin: 0;
+    }
+  }
+}
