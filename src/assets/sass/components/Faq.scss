@@ -32,12 +32,8 @@
     }
 
     &-item {
-      border-top-width: 1px;
-      border-top-style: solid;
-      border-top-color: $color-grey-blue;
-      border-bottom-width: 1px;
-      border-bottom-style: solid;
-      border-bottom-color: $color-grey-blue;
+      border-top: 1px solid $color-grey-blue;
+      border-bottom: 1px solid $color-grey-blue;
       background: $color-grey-weak;
       width: 100%;
 
@@ -51,16 +47,22 @@
         color: $color-grey-medium;
         float: right;
         text-align: center;
-        /* font-size: x-large; */
         font-weight: 300;
         padding: 0;
         width: 1rem;
       }
 
+      details[open] {
+        background-color: $color-white;
+      }
+
+      details[open] summary {
+        color: $color-green-full;
+      }
+
       details[open] summary:after {
         content: '▼';
         float: right;
-       /*  font-size: x-large; */
         font-weight: 300;
         text-align: center;
         width: 1rem;
@@ -76,14 +78,13 @@
     &-question {
       font-size: 1.6rem;
       font-weight: 600;
-      color: $color-green-full;
+      color: $color-purple-dark;
       padding: 2rem;
       outline: none;
     }
 
     &-answer {
       font-size: 1.4rem;
-      /* font-family: var( --nunito-regular); */
       background-color: $color-white;
       color: $color-grey-clear;
       border-top: solid 0.1rem $color-grey-blue;
