@@ -4,11 +4,14 @@ import NavBar from '../../components/NavBar';
 import About from '../../components/About';
 import Definitions from '../../components/Definitions';
 import OurStory from '../../components/OurStory';
+import FAQ from '../../components/Faq';
 
 function Main() {
   const aboutRef = createRef();
   const missionRef = createRef();
-  const myRefs = { aboutRef, missionRef };
+  const faqRef = createRef();
+
+  const myRefs = { aboutRef, missionRef, faqRef };
 
   return (
     <>
@@ -17,6 +20,7 @@ function Main() {
       <About rfs={aboutRef} />
       <Definitions rfs={missionRef} />
       <OurStory />
+      <FAQ rfs={faqRef} />
     </>
   );
 }
