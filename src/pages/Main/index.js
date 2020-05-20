@@ -30,8 +30,6 @@ function Main() {
       <About rfs={aboutRef} />
       <Definitions rfs={missionRef} />
       <OurStory />
-      <FAQ rfs={faqRef} />
-      <Footer />
       <Partners
         images={[
           cocaCola,
@@ -42,6 +40,8 @@ function Main() {
           rocketseat,
         ]}
       />
+      <FAQ rfs={faqRef} />
+      <Footer />
     </>
   );
 }
