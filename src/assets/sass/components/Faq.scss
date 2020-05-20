@@ -18,20 +18,56 @@
   }
 
   .faq_list {
-    width: 100%;
-    max-width: 95rem;
+    width: 95%;
     list-style-type: none;
     padding: 7rem 0;
 
     @include responsive(tab_medium) {
-      max-width: 80%;
+      width: 95%;
     }
 
     @include responsive(phone) {
-      max-width: 90%;
+      width: 95%;
     }
 
     &-item {
+      border-bottom: 1px solid $color-grey-blue;
+      background: $color-grey-weak;
+      width: 100%;
+
+      summary::-webkit-details-marker {
+        display: none;
+      }
+
+      summary:after {
+        background: transparent;
+        content: '►';
+        color: $color-grey-medium;
+        float: right;
+        text-align: center;
+        font-weight: 300;
+        padding: 0;
+        width: 1rem;
+      }
+
+      details[open] {
+        background-color: $color-white;
+      }
+
+      details[open] summary {
+        color: $color-green-full;
+      }
+
+      details[open] summary:after {
+        content: '▼';
+        float: right;
+        font-weight: 300;
+        text-align: center;
+        width: 1rem;
+      }
+    }
+
+    &-item:first-child {
       border-top: 1px solid $color-grey-blue;
       border-bottom: 1px solid $color-grey-blue;
       background: $color-grey-weak;

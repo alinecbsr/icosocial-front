@@ -160,8 +160,16 @@ html {
   text-rendering: optimizelegibility;
   -webkit-font-smoothing: antialiased;
 
+  @include responsive(tab_medium) {
+		font-size: 50%;
+  }
+
 	@include responsive(tab_port) {
 		font-size: 50%;
+  }
+
+  @include responsive(tablet) {
+		font-size: 40%;
   }
 
   @include responsive(phone) {
@@ -213,4 +221,9 @@ html {
   0 6px white,
   -7px 0 4px -3px rgba(0, 0, 0, 0.1),
   7px 0 4px -3px rgba(0, 0, 0, 0.1);
+
+  @include responsive(phone) {
+    box-shadow: none;
+    width: 90%;
+	}
 }

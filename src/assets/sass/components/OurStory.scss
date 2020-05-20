@@ -23,6 +23,20 @@
     height: auto;
     display: flex;
     flex-direction: column;
+
+    @include responsive(tab_medium) {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    @include responsive(phone) {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
 
   &_space1 {
@@ -33,8 +47,15 @@
     flex-direction: column;
     margin: 2rem;
 
+    @include responsive(tab_medium) {
+      padding-top: 0;
+      width: 95%;
+      max-width: none;
+    }
+
     @include responsive(phone) {
-      max-width: 30rem;
+      width: 95%;
+      max-width: none;
     }
 
     &-icon {
@@ -107,11 +128,15 @@
     padding-top: 7rem;
 
     @include responsive(tab_medium) {
-      padding-top: none;
+      padding-top: 0;
+      width: 95%;
+      max-width: none;
     }
 
     @include responsive(phone) {
-      max-width: 30rem;
+      width: 95%;
+      max-width: none;
+      padding-top: 0;
     }
 
     &-icon {
