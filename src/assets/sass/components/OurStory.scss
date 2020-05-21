@@ -16,6 +16,12 @@
 
   @include responsive(tab_medium) {
     justify-content: center;
+    max-width: 70%;
+  }
+
+  @include responsive(phone) {
+    justify-content: center;
+    max-width: 98%;
   }
 
   &_column {

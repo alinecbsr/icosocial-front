@@ -1,10 +1,19 @@
 .faq {
   width: 100%;
+  max-width: 85%;
   height: auto;
   display: flex;
   align-items: center;
   flex-direction: column;
   background: $color-white;
+
+  @include responsive(tab_medium) {
+    max-width: 98%;
+  }
+
+  @include responsive(phone) {
+    max-width: 98%;
+  }
 
   .faq_header {
     width: 100%;
@@ -21,14 +30,6 @@
     width: 95%;
     list-style-type: none;
     padding: 7rem 0;
-
-    @include responsive(tab_medium) {
-      width: 95%;
-    }
-
-    @include responsive(phone) {
-      width: 95%;
-    }
 
     &-item {
       border-bottom: 1px solid $color-grey-blue;

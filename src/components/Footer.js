@@ -19,7 +19,7 @@ function Footer() {
           <ul className="footer__contacts--list">
             <li className="footer__contacts--item">
               <div className="footer__contacts--item-container">
-                <FiMail size={24} />
+                <FiMail size={24} color="#42465A" />
               </div>
 
               <h6>Email</h6>
@@ -27,7 +27,7 @@ function Footer() {
             </li>
             <li className="footer__contacts--item">
               <div className="footer__contacts--item-container">
-                <FiPhone size={24} />
+                <FiPhone size={24} color="#42465A" />
               </div>
 
               <h6>Telefone</h6>
@@ -35,7 +35,7 @@ function Footer() {
             </li>
             <li className="footer__contacts--item">
               <div className="footer__contacts--item-container">
-                <FiMapPin size={24} />
+                <FiMapPin size={24} color="#42465A" />
               </div>
 
               <h6>Endereço</h6>
@@ -43,7 +43,7 @@ function Footer() {
             </li>
             <li className="footer__contacts--item">
               <div className="footer__contacts--item-container">
-                <FiInstagram size={24} />
+                <FiInstagram size={24} color="#42465A" />
               </div>
 
               <h6>Instagram</h6>
@@ -51,7 +51,7 @@ function Footer() {
             </li>
             <li className="footer__contacts--item">
               <div className="footer__contacts--item-container">
-                <FiDollarSign size={24} />
+                <FiDollarSign size={24} color="#42465A" />
               </div>
 
               <h6>Doações</h6>

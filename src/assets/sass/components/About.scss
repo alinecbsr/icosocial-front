@@ -1,12 +1,19 @@
 .about {
   width: 100%;
-  max-width: 99%;
   height: auto;
   display: flex;
   flex-wrap: wrap-reverse;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+
+  @include responsive(tab_medium) {
+    max-width: 95%;
+  }
+
+  @include responsive(phone) {
+    max-width: 98%;
+  }
 
   &_article {
     max-width: 61rem;
@@ -43,7 +50,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 16px;
+      font-size: 1.6rem;
       font-weight: 700;
       letter-spacing: 1px;
       text-transform: uppercase;
@@ -69,21 +76,15 @@
     }
   }
 
-  &_fig {
-    margin: 0;
-    height: auto;
-    margin-top: 4rem;
+  &_abt {
+    max-width: 46rem;
 
-    &-abt {
-      width: 100%;
+    @include responsive(tab_medium) {
+      max-width: 32rem;
+    }
 
-      @include responsive(tab_medium) {
-        max-width: 32rem;
-      }
-
-      @include responsive(phone) {
-        max-width: 32rem;
-      }
+    @include responsive(phone) {
+      max-width: 32rem;
     }
   }
 }

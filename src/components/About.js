@@ -23,9 +23,7 @@ function About(props) {
             Saiba mais
           </button>
         </article>
-        <figure className="about_fig">
-          <img className="about_fig-abt" src={figure} alt="figure" />
-        </figure>
+        <img className="about_abt" src={figure} alt="figure" />
       </div>
     </section>
   );
