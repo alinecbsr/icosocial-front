@@ -1,6 +1,7 @@
 @import 'global/variables';
 @import 'global/responsive';
 @import 'global/placeholders';
+@import 'components/NavFixed';
 
 @import 'pages/Main';
 
@@ -213,7 +214,7 @@ html {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  background-color: $color-white;
+  background-color: $color-grey-weak;
   margin: 0;
   padding-top: 4rem;
   box-shadow:

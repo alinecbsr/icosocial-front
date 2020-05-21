@@ -1,49 +1,66 @@
-import React, { createRef } from 'react';
-
-import FAQ from '../../components/Faq';
+/* eslint-disable no-unused-vars */
+import React, { Component, createRef } from 'react';
+import NavFixed from '../../components/NavFixed';
 import Hero from '../../components/Hero';
-import About from '../../components/About';
 import NavBar from '../../components/NavBar';
-import Footer from '../../components/Footer';
-import OurStory from '../../components/OurStory';
-import Partners from '../../components/Partners';
+import About from '../../components/About';
 import Definitions from '../../components/Definitions';
+import OurStory from '../../components/OurStory';
+import FAQ from '../../components/Faq';
+import Footer from '../../components/Footer';
+import Partners from '../../components/Partners';
 
-import cocaCola from '../../assets/image/logomarcas/coca-cola.png';
-import facebook from '../../assets/image/logomarcas/facebook.png';
-import globo from '../../assets/image/logomarcas/globo.png';
-import guaranaAntartica from '../../assets/image/logomarcas/guarana-logo-antartica.png';
-import pivotal from '../../assets/image/logomarcas/pivotal.png';
-import rocketseat from '../../assets/image/logomarcas/rocketseat.jpg';
+class Main extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      scrollTop: 0,
+    };
+  }
 
-function Main() {
-  const aboutRef = createRef();
-  const missionRef = createRef();
-  const faqRef = createRef();
+  componentDidMount() {
+    window.addEventListener('scroll', this.onMoveScroll);
+  }
 
-  const myRefs = { aboutRef, missionRef, faqRef };
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.onMoveScroll);
+  }
 
-  return (
-    <>
-      <Hero />
-      <NavBar rfs={myRefs} />
-      <About rfs={aboutRef} />
-      <Definitions rfs={missionRef} />
-      <OurStory />
-      <Partners
-        images={[
-          cocaCola,
-          facebook,
-          globo,
-          guaranaAntartica,
-          pivotal,
-          rocketseat,
-        ]}
-      />
-      <FAQ rfs={faqRef} />
-      <Footer />
-    </>
-  );
+  onMoveScroll = (e) => {
+    this.setState({ scrollTop: document.documentElement.scrollTop });
+  };
+
+  render() {
+    let isShow = false;
+    const { scrollTop } = this.state;
+    const maxScroll = 751;
+    const heroRef = createRef();
+    const aboutRef = createRef();
+    const partnersRef = createRef();
+    const faqRef = createRef();
+
+    const myRefs = { aboutRef, partnersRef, faqRef, heroRef };
+
+    if (scrollTop >= maxScroll) {
+      isShow = true;
+    } else {
+      isShow = false;
+    }
+
+    return (
+      <>
+        <NavFixed visible={isShow} rfs={myRefs} />
+        <Hero rfs={heroRef} />
+        <NavBar rfs={myRefs} />
+        <About rfs={aboutRef} />
+        <Definitions />
+        <OurStory />
+        <Partners rfs={partnersRef} />
+        <FAQ rfs={faqRef} />
+        <Footer />
+      </>
+    );
+  }
 }
 
 export default Main;

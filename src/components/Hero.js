@@ -2,7 +2,6 @@ import React from 'react';
 import AwesomeSlider from 'react-awesome-slider';
 import withAutoplay from 'react-awesome-slider/dist/autoplay';
 import 'react-awesome-slider/dist/styles.css';
-
 import Banner from './Banner';
 
 import logo1 from '../assets/image/logo1.svg';
@@ -14,14 +13,14 @@ import imgHero3 from '../assets/image/imgHero3.svg';
 
 const AutoplaySlider = withAutoplay(AwesomeSlider);
 
-function Hero() {
+function Hero(props) {
   return (
-    <div className="hero">
+    <div ref={props.rfs} className="hero">
       <AutoplaySlider
         play
         organicArrows={false}
         cancelOnInteraction={false}
-        interval={3000}
+        interval={5000}
       >
         <div className="banner">
           <Banner

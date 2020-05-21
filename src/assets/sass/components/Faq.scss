@@ -5,7 +5,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  background: $color-white;
+  background: $color-grey-weak;
 
   @include responsive(tab_medium) {
     max-width: 98%;
