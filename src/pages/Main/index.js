@@ -10,6 +10,13 @@ import FAQ from '../../components/Faq';
 import Footer from '../../components/Footer';
 import Partners from '../../components/Partners';
 
+import cocaCola from '../../assets/image/logomarcas/coca-cola.png';
+import facebook from '../../assets/image/logomarcas/facebook.png';
+import globo from '../../assets/image/logomarcas/globo.png';
+import guaranaAntartica from '../../assets/image/logomarcas/guarana-logo-antartica.png';
+import pivotal from '../../assets/image/logomarcas/pivotal.png';
+import rocketseat from '../../assets/image/logomarcas/rocketseat.jpg';
+
 class Main extends Component {
   constructor(props) {
     super(props);
@@ -55,7 +62,17 @@ class Main extends Component {
         <About rfs={aboutRef} />
         <Definitions />
         <OurStory />
-        <Partners rfs={partnersRef} />
+        <Partners
+          /* rfs={partnersRef} */
+          images={[
+            cocaCola,
+            facebook,
+            globo,
+            guaranaAntartica,
+            pivotal,
+            rocketseat,
+          ]}
+        />
         <FAQ rfs={faqRef} />
         <Footer />
       </>

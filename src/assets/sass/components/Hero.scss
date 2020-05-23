@@ -25,7 +25,9 @@
     height: 21rem;
 
     @include responsive(phone) {
-      display: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     &-container {
@@ -42,12 +44,20 @@
 
       &-logo {
         max-width: 26rem;
+
+        @include responsive(phone) {
+          max-width: 25rem;
+        }
       }
     }
 
     &-btn {
       padding-top: 6rem;
       display: flex;
+
+      @include responsive(phone) {
+        display: none;
+      }
 
       &-rgt,
       &-lgn {

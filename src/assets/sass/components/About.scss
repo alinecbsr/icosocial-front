@@ -6,6 +6,7 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  padding-top: 6%;
 
   @include responsive(tab_medium) {
     max-width: 95%;

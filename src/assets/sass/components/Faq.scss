@@ -6,12 +6,9 @@
   align-items: center;
   flex-direction: column;
   background: $color-grey-weak;
+  padding-top: 8%;
 
   @include responsive(tab_medium) {
-    max-width: 98%;
-  }
-
-  @include responsive(phone) {
     max-width: 98%;
   }
 

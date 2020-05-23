@@ -4,7 +4,7 @@
 import React from 'react';
 
 function NavBar({ rfs }) {
-  const { aboutRef, partnersRef, faqRef } = rfs;
+  const { aboutRef, /* partnersRef, */ faqRef } = rfs;
   const list = [
     {
       item: 'Sobre nós',
@@ -24,7 +24,7 @@ function NavBar({ rfs }) {
     },
     {
       item: 'Parceiros',
-      link: partnersRef,
+      link: null /* partnersRef, */,
     },
     {
       item: 'FAQ',

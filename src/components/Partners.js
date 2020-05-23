@@ -1,23 +1,8 @@
 /* eslint-disable react/prop-types */
-/* eslint-disable react/destructuring-assignment */
 import React, { useState, useEffect } from 'react';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
-import cocaCola from '../assets/image/logomarcas/coca-cola.png';
-import facebook from '../assets/image/logomarcas/facebook.png';
-import globo from '../assets/image/logomarcas/globo.png';
-import guaranaAntartica from '../assets/image/logomarcas/guarana-logo-antartica.png';
-import pivotal from '../assets/image/logomarcas/pivotal.png';
-import rocketseat from '../assets/image/logomarcas/rocketseat.jpg';
 
-function Partners(props) {
-  const images = [
-    cocaCola,
-    facebook,
-    globo,
-    guaranaAntartica,
-    pivotal,
-    rocketseat,
-  ];
+function Partners(/* props, */ { images = [] }) {
   const [thumbnails, setThumnails] = useState([]);
   const [previousSlideStyle, setPreviousSlideStyle] = useState({});
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -69,7 +54,7 @@ function Partners(props) {
 
   return (
     <>
-      <section ref={props.rfs} className="slideshow container">
+      <section /* ref={props.rfs} */ className="slideshow container">
         <h2>Parceiros</h2>
         <div className="slide-holder">
           <section className="slide previous-slide">

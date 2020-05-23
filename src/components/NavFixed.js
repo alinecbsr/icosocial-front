@@ -39,7 +39,7 @@ class NavFixed extends Component {
   render() {
     const {
       aboutRef,
-      partnersRef,
+      /* partnersRef, */
       faqRef,
       heroRef,
       open,
@@ -76,7 +76,7 @@ class NavFixed extends Component {
       },
       {
         item: 'Parceiros',
-        link: partnersRef,
+        link: null /* partnersRef, */,
       },
       {
         item: 'FAQ',
