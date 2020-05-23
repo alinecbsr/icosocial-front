@@ -1,0 +1,180 @@
+h2 {
+  margin: 0;
+  font-weight: 400;
+  font-size: 4.8rem;
+  color: $color-grey-dark;
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 10%;
+}
+
+.who {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 4%;
+
+  @include responsive(tab_medium) {
+    max-width: 95%;
+  }
+
+  @include responsive(phone) {
+    max-width: 98%;
+  }
+
+  &_article {
+    width: 95%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 1rem;
+
+    &-text {
+      color: $color-grey-dark;
+      font-size: 1.8rem;
+      font-weight: 400;
+      text-align: justify;
+      text-indent: 3rem;
+    }
+  }
+
+
+  .weDo {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: $color-purple-medium;
+    margin-top: 4%;
+    padding: 4rem 8rem;
+
+    @include responsive(tab_medium) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 4rem 0;
+    }
+  }
+
+  .zone {
+    max-width: 32rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem 0.5rem;
+
+    background-color: $color-purple-medium;
+
+    @include responsive(tab_medium) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      max-width: 70%;
+      padding: 3rem;
+    }
+
+    @include responsive(phone) {
+      max-width: 98%;
+    }
+
+    &_img {
+      width: 10rem;
+      padding: 3rem;
+    }
+
+    &_text {
+      font-size: 1.8rem;
+      font-weight: 400;
+      line-height: 2.4rem;
+      letter-spacing: 1px;
+      text-align: justify;
+      padding: 0 1rem 3rem 1rem;
+      color: $color-white;
+    }
+
+    &_number {
+      margin: 0;
+      padding: 0;
+      font-size: 3.6rem;
+      font-weight: 500;
+      line-height: 3.8rem;
+      letter-spacing: 1px;
+      text-align: center;
+      color: $color-white;
+      border-bottom: 0.6rem solid $color-grey-light;
+    }
+
+    &_subtitle {
+      margin: 0;
+      padding: 0;
+      font-size: 1.8rem;
+      font-weight: 400;
+      line-height: 2.4rem;
+      letter-spacing: 1px;
+      text-align: justify;
+      color: $color-white;
+    }
+  }
+
+
+
+  .why {
+    width: 98%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 6%;
+
+    @include responsive(tab_medium) {
+      max-width: 98%;
+      justify-content: center;
+    align-items: center;
+    }
+
+    @include responsive(phone) {
+      max-width: 98%;
+      flex-direction: column;
+    }
+
+    &_text {
+      max-width: 42%;
+      display: flex;
+      flex-wrap: wrap;
+      color: $color-green-full;
+      font-size: 4.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+
+      @include responsive(phone) {
+        width: 98%;
+        text-align: center;
+        max-width: 90%;
+      }
+    }
+
+    &_img {
+      max-width: 46rem;
+
+      @include responsive(tab_medium) {
+        max-width: 32rem;
+      }
+
+      @include responsive(phone) {
+        max-width: 32rem;
+      }
+    }
+  }
+}
