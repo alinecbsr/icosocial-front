@@ -4,7 +4,7 @@ h2 {
   font-size: 4.8rem;
   color: $color-grey-dark;
   text-transform: uppercase;
-  padding-top: 10%;
+  padding-top: 4%;
 }
 
 .participate {
@@ -15,7 +15,7 @@ h2 {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  padding-top: 4%;
+  padding-top: 6%;
 
   @include responsive(tab_medium) {
     max-width: 95%;
@@ -31,7 +31,6 @@ h2 {
     display: flex;
     align-items: center;
     flex-direction: column;
-    /* justify-content: center; */
     flex-wrap: wrap;
     margin-top: 4%;
     padding: 1rem;
@@ -87,7 +86,7 @@ h2 {
   }
 
   &_article2 {
-    width: 98%;
+    width: 95%;
     height: auto;
     display: flex;
     align-items: center;
