@@ -6,9 +6,10 @@ import NavBar from '../../components/NavBar';
 import About from '../../components/About';
 import Definitions from '../../components/Definitions';
 import OurStory from '../../components/OurStory';
+import Participate from '../../components/Participate';
+import Partners from '../../components/Partners';
 import FAQ from '../../components/Faq';
 import Footer from '../../components/Footer';
-import Partners from '../../components/Partners';
 
 import cocaCola from '../../assets/image/logomarcas/coca-cola.png';
 import facebook from '../../assets/image/logomarcas/facebook.png';
@@ -62,6 +63,7 @@ class Main extends Component {
         <About rfs={aboutRef} />
         <Definitions />
         <OurStory />
+        <Participate />
         <Partners
           /* rfs={partnersRef} */
           images={[
