@@ -4,7 +4,7 @@ h2 {
   font-size: 4.8rem;
   color: $color-grey-dark;
   text-transform: uppercase;
-  padding-top: 4%;
+  padding-top: 10%;
 }
 
 .participate {
@@ -33,7 +33,7 @@ h2 {
     flex-direction: column;
     /* justify-content: center; */
     flex-wrap: wrap;
-    margin-top: 4rem;
+    margin-top: 4%;
     padding: 1rem;
 
     &-text1 {
@@ -64,7 +64,7 @@ h2 {
       letter-spacing: 1px;
       text-transform: uppercase;
       text-align: center;
-      margin-top: 4rem;
+      margin-top: 6%;
       color: $color-purple-clear;
       background-color: transparent;
       border: 2px solid $color-grey-full;
@@ -93,7 +93,7 @@ h2 {
     align-items: center;
     flex-direction: column;
     flex-wrap: wrap;
-    margin-top: 4rem;
+    margin-top: 4%;
     padding: 1rem;
 
     &-text1 {
@@ -104,14 +104,6 @@ h2 {
       text-align: justify;
       margin: 0;
       padding-top: 2%;
-    }
-
-    &-text2 {
-      color: $color-grey-dark;
-      font-size: 1.6rem;
-      font-weight: 300;
-      margin: 1rem;
-      padding-left: 50%;
     }
 
     &-btn-participate {
@@ -125,7 +117,7 @@ h2 {
       letter-spacing: 1px;
       text-transform: uppercase;
       text-align: center;
-      margin-top: 4%;
+      margin-top: 6%;
       color: $color-purple-clear;
       background-color: transparent;
       border: 2px solid $color-grey-full;

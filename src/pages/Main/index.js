@@ -44,10 +44,11 @@ class Main extends Component {
     const maxScroll = 751;
     const heroRef = createRef();
     const aboutRef = createRef();
+    const participateRef = createRef();
     const partnersRef = createRef();
     const faqRef = createRef();
 
-    const myRefs = { aboutRef, partnersRef, faqRef, heroRef };
+    const myRefs = { aboutRef, partnersRef, faqRef, heroRef, participateRef };
 
     if (scrollTop >= maxScroll) {
       isShow = true;
@@ -63,7 +64,7 @@ class Main extends Component {
         <About rfs={aboutRef} />
         <Definitions />
         <OurStory />
-        <Participate />
+        <Participate rfs={participateRef} />
         <Partners
           /* rfs={partnersRef} */
           images={[

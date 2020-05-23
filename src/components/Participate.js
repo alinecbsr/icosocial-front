@@ -1,9 +1,9 @@
 import React from 'react';
 import participate from '../assets/image/participate.svg';
 
-function Participate() {
+function Participate(props) {
   return (
-    <section className="container">
+    <section ref={props.rfs} className="container">
       <h2>Participe</h2>
       <div className="participate">
         <img className="participate_abt" src={participate} alt="figure" />
