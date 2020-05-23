@@ -24,17 +24,14 @@ function Participate(props) {
         </article>
         <article className="participate_article2">
           <p className="participate_article2-text1">
-            “Vestibulum sit amet massa vulputate, pulvinar sapien at,
-            sollicitudin metus. Praesent metus ipsum, gravida non libero at,
-            pulvinar porttitor felis. Morbi diam turpis, lobortis vel dictum
-            sed, pulvinar id libero. Vestibulum sit amet massa vulputate,
-            pulvinar sapien at, sollicitudin metus. Praesent metus ipsum,
-            gravida non libero at, pulvinar porttitor felis. Morbi diam turpis,
-            lobortis vel dictum sed, pulvinar id libero. Aenean neque nulla
-            Vestibulum sit amet massa vulputate, pulvinar sapien at,
-            sollicitudin metus. Praesent metus ipsum, gravida non libero at,
-            pulvinar porttitor felis. Morbi diam turpis, lobortis vel dictum
-            sed, pulvinar id libero. Aenean neque nulla”
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+            lacinia, justo sit amet luctus pretium, purus ex facilisis lorem,
+            rutrum bibendum quam lectus viverra libero. Lorem ipsum dolor sit
+            amet, consectetur adipiscing elit. Donec in scelerisque felis. Nam
+            erat risus, dignissim a eros quis, lacinia sodales magna. Vivamus
+            accumsan risus in elit auctor condimentum a tempus lorem. Morbi sit
+            amet maximus urna. Etiam ac diam tincidunt, convallis neque et,
+            pharetra metus. Vivamus vulputate facilisis nulla et euismod.
           </p>
           <button
             className="participate_article2-btn-participate"
