@@ -1,9 +1,9 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 
-function Definitions({ rfs }) {
+function Definitions() {
   return (
-    <section ref={rfs} className="container">
+    <section className="container">
       <div className="define">
         <div className="card">
           <h2 className="card_title">Missão</h2>

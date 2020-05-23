@@ -25,6 +25,12 @@
     };
   }
 
+  @if $breakpoint == md_desktop {
+    @media only screen and (max-width: 80em) {  // 1184px
+      @content
+    };
+  }
+
   @if $breakpoint == lg_desktop {
     @media only screen and (max-width: 128rem) {  // 1633px
       @content

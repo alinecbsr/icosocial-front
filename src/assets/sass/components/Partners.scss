@@ -4,7 +4,7 @@ section.slideshow {
 }
 
 section.slideshow h2 {
-  margin: 0 0 5rem 0;
+  margin: 0 0 14rem 0;
   font-size: 4.8rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -68,9 +68,6 @@ section.slideshow div.slideshow-controller {
   align-items: center;
   position: absolute;
   bottom: 15rem;
-
-
-
 }
 
 section.slideshow div.slideshow-controller button {
@@ -88,6 +85,7 @@ section.slideshow div.slideshow-controller button {
   cursor: pointer;
   text-align: center;
   user-select: none;
+  outline: none;
 
   @include responsive(phone) {
 		margin: 0;

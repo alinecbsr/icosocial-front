@@ -1,7 +1,8 @@
+/* eslint-disable react/prop-types */
 import React, { useState, useEffect } from 'react';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 
-function Partners({ images = [] }) {
+function Partners(/* props, */ { images = [] }) {
   const [thumbnails, setThumnails] = useState([]);
   const [previousSlideStyle, setPreviousSlideStyle] = useState({});
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -53,7 +54,7 @@ function Partners({ images = [] }) {
 
   return (
     <>
-      <section className="slideshow container">
+      <section /* ref={props.rfs} */ className="slideshow container">
         <h2>Parceiros</h2>
         <div className="slide-holder">
           <section className="slide previous-slide">

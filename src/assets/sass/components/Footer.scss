@@ -13,6 +13,14 @@
     flex-direction: column;
     align-items: center;
     max-width: 128rem;
+
+    @include responsive(tab_medium) {
+      width: 60%;
+    }
+
+    @include responsive(phone) {
+      width: 100%;
+    }
   }
 
   &__title {
@@ -36,6 +44,10 @@
     width: 100%;
     padding: 0;
     margin: 0;
+
+    @include responsive(tab_medium) {
+      display: flex;
+    }
   }
 
   &__contacts--list {
@@ -45,6 +57,13 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     justify-items: center;
+
+    @include responsive(tab_medium) {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
 
   &__contacts--item {
