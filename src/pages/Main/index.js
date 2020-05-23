@@ -6,9 +6,10 @@ import NavBar from '../../components/NavBar';
 import About from '../../components/About';
 import Definitions from '../../components/Definitions';
 import OurStory from '../../components/OurStory';
+import Participate from '../../components/Participate';
+import Partners from '../../components/Partners';
 import FAQ from '../../components/Faq';
 import Footer from '../../components/Footer';
-import Partners from '../../components/Partners';
 
 import cocaCola from '../../assets/image/logomarcas/coca-cola.png';
 import facebook from '../../assets/image/logomarcas/facebook.png';
@@ -43,10 +44,11 @@ class Main extends Component {
     const maxScroll = 751;
     const heroRef = createRef();
     const aboutRef = createRef();
+    const participateRef = createRef();
     const partnersRef = createRef();
     const faqRef = createRef();
 
-    const myRefs = { aboutRef, partnersRef, faqRef, heroRef };
+    const myRefs = { aboutRef, partnersRef, faqRef, heroRef, participateRef };
 
     if (scrollTop >= maxScroll) {
       isShow = true;
@@ -62,6 +64,7 @@ class Main extends Component {
         <About rfs={aboutRef} />
         <Definitions />
         <OurStory />
+        <Participate rfs={participateRef} />
         <Partners
           /* rfs={partnersRef} */
           images={[

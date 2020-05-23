@@ -38,10 +38,11 @@ class NavFixed extends Component {
 
   render() {
     const {
+      heroRef,
       aboutRef,
       /* partnersRef, */
+      participateRef,
       faqRef,
-      heroRef,
       open,
       visible,
     } = this.state;
@@ -72,7 +73,7 @@ class NavFixed extends Component {
       },
       {
         item: 'Participe',
-        link: null,
+        link: participateRef,
       },
       {
         item: 'Parceiros',
