@@ -6,6 +6,7 @@ import NavBar from '../../components/NavBar';
 import About from '../../components/About';
 import Definitions from '../../components/Definitions';
 import OurStory from '../../components/OurStory';
+import WhatWeDo from '../../components/WhatWeDo';
 import WhyWeDo from '../../components/WhyWeDo';
 import Participate from '../../components/Participate';
 import Partners from '../../components/Partners';
@@ -15,6 +16,7 @@ import Footer from '../../components/Footer';
 import {
   heroRef,
   aboutRef,
+  byWhatRef,
   byWhoRef,
   participateRef,
   partnersRef,
@@ -68,6 +70,7 @@ class Main extends Component {
         <About rfs={aboutRef} />
         <Definitions />
         <OurStory />
+        <WhatWeDo rfs={byWhatRef} />
         <WhyWeDo rfs={byWhoRef} />
         <Participate rfs={participateRef} />
         <Partners
