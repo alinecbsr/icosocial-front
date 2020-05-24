@@ -1,8 +1,8 @@
-/* eslint-disable react/prop-types */
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 
-function Partners(/* props, */ { images = [] }) {
+function Partners({ images = [], rfs }) {
   const [thumbnails, setThumnails] = useState([]);
   const [previousSlideStyle, setPreviousSlideStyle] = useState({});
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -54,7 +54,7 @@ function Partners(/* props, */ { images = [] }) {
 
   return (
     <>
-      <section /* ref={props.rfs} */ className="slideshow container">
+      <section ref={rfs} className="slideshow container">
         <h2>Parceiros</h2>
         <div className="slide-holder">
           <section className="slide previous-slide">
@@ -80,5 +80,10 @@ function Partners(/* props, */ { images = [] }) {
     </>
   );
 }
+
+Partners.propTypes = {
+  rfs: PropTypes.objectOf(PropTypes.any).isRequired,
+  images: PropTypes.arrayOf(PropTypes.string).isRequired,
+};
 
 export default Partners;

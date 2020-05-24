@@ -2,7 +2,6 @@
   position: fixed;
   width: 100vw;
   height: auto;
-  max-height: 8rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -15,7 +14,7 @@
 
   &_logo {
     width: 18rem;
-    height: 12rem;
+    height: 6rem;
     cursor: pointer;
     padding-left: 1.5rem;
   }
@@ -104,10 +103,11 @@
     display: none;
 
     @include responsive(md_desktop) {
-      width: 100%;
+      width: auto;
       height: auto;
       display: flex;
       background-color: $color-white;
+      margin-right: 2rem;
     }
 
     &-hamburger {
@@ -115,28 +115,19 @@
 
       @include responsive(md_desktop) {
         display: block;
-        position: absolute;
         font-size: 2.5rem;
         cursor: pointer;
-        padding-right: 2rem;
-        top: 2rem;
-        right: 1rem;
         border: 0;
         text-align: center;
         background: transparent;
         color: $color-purple-dark;
         outline: none;
-        z-index: 100;
       }
 
       @include responsive(phone) {
         display: block;
-        position: absolute;
         font-size: 2.5rem;
         cursor: pointer;
-        padding-right: 3rem;
-        top: 10px;
-        right: 1rem;
         border: 0;
         text-align: center;
         background: transparent;
@@ -150,7 +141,6 @@
     display: flex;
     width: auto;
     height: auto;
-    max-height: 8rem;
 
     &-rgt,
     &-lgn {
@@ -224,7 +214,7 @@
       color: $color-white;
       background-color: $color-green-full;
       border: 1px solid transparent;
-      border-radius: 8px;
+      border-radius: 4px;
       transition: all 0.1s ease-in-out;
       text-decoration: none;
       cursor: pointer;

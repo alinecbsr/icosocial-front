@@ -1,9 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import participate from '../assets/image/participate.svg';
 
-function Participate(props) {
+function Participate({ rfs }) {
   return (
-    <section ref={props.rfs} className="container">
+    <section ref={rfs} className="container">
       <h2>Participe</h2>
       <div className="participate">
         <img className="participate_abt" src={participate} alt="figure" />
@@ -44,5 +46,9 @@ function Participate(props) {
     </section>
   );
 }
+
+Participate.propTypes = {
+  rfs: PropTypes.objectOf(PropTypes.any).isRequired,
+};
 
 export default Participate;

@@ -68,6 +68,10 @@ section.slideshow div.slideshow-controller {
   align-items: center;
   position: absolute;
   bottom: 15rem;
+
+  @include responsive(phone) {
+    width: 90%;
+  }
 }
 
 section.slideshow div.slideshow-controller button {

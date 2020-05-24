@@ -30,12 +30,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 70%;
+    max-width: 80%;
     padding: 3rem 3rem;
   }
 
   @include responsive(phone) {
-    max-width: 98%;
+    max-width: 80%;
   }
 
   &_title {
