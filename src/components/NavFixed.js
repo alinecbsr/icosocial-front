@@ -40,6 +40,7 @@ class NavFixed extends Component {
     const {
       heroRef,
       aboutRef,
+      byWhatRef,
       byWhoRef,
       /* partnersRef, */
       participateRef,
@@ -66,7 +67,7 @@ class NavFixed extends Component {
       },
       {
         item: 'O que fazemos',
-        link: null,
+        link: byWhatRef,
       },
       {
         item: 'Por quem fazemos',

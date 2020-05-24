@@ -6,6 +6,7 @@ import NavBar from '../../components/NavBar';
 import About from '../../components/About';
 import Definitions from '../../components/Definitions';
 import OurStory from '../../components/OurStory';
+import WhatWeDo from '../../components/WhatWeDo';
 import WhyWeDo from '../../components/WhyWeDo';
 import Participate from '../../components/Participate';
 import Partners from '../../components/Partners';
@@ -45,6 +46,7 @@ class Main extends Component {
     const maxScroll = 751;
     const heroRef = createRef();
     const aboutRef = createRef();
+    const byWhatRef = createRef();
     const byWhoRef = createRef();
     const participateRef = createRef();
     const partnersRef = createRef();
@@ -57,6 +59,7 @@ class Main extends Component {
       heroRef,
       participateRef,
       byWhoRef,
+      byWhatRef,
     };
 
     if (scrollTop >= maxScroll) {
@@ -73,6 +76,7 @@ class Main extends Component {
         <About rfs={aboutRef} />
         <Definitions />
         <OurStory />
+        <WhatWeDo rfs={byWhatRef} />
         <WhyWeDo rfs={byWhoRef} />
         <Participate rfs={participateRef} />
         <Partners
