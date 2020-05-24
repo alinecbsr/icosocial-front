@@ -1,13 +1,7 @@
-/* eslint-disable jsx-a11y/click-events-have-key-events */
-/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
-
-/* eslint-disable class-methods-use-this */
-/* eslint-disable no-unused-vars */
-/* eslint-disable react/no-deprecated */
-/* eslint-disable react/prop-types */
 import React, { Component } from 'react';
-import { FiUser } from 'react-icons/fi';
+import { FiUser, FiMenu, FiX } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 import logo from '../assets/image/logo2.svg';
 
@@ -23,7 +17,7 @@ class NavFixed extends Component {
     this.setState({ visible: props.visible, ...props.rfs });
   }
 
-  toggleMenu(event) {
+  toggleMenu() {
     const { open } = this.state;
     this.setState({ open: !open });
   }
@@ -41,7 +35,7 @@ class NavFixed extends Component {
       heroRef,
       aboutRef,
       byWhoRef,
-      /* partnersRef, */
+      partnersRef,
       participateRef,
       faqRef,
       open,
@@ -53,10 +47,10 @@ class NavFixed extends Component {
 
     if (open) {
       showMenu = '';
-      menuBtn = 'X';
+      menuBtn = <FiX size={20} />;
     } else {
       showMenu = 'menu_show';
-      menuBtn = '☰';
+      menuBtn = <FiMenu size={20} />;
     }
 
     const list = [
@@ -78,7 +72,7 @@ class NavFixed extends Component {
       },
       {
         item: 'Parceiros',
-        link: null /* partnersRef, */,
+        link: partnersRef,
       },
       {
         item: 'FAQ',
@@ -112,15 +106,15 @@ class NavFixed extends Component {
           </ul>
         </nav>
         <div className="fixedNav_btn">
-          <Link className="fixedNav_btn-rgt" to="/.">
+          <Link className="fixedNav_btn-rgt" to="/">
             Cadastro
           </Link>
-          <Link className="fixedNav_btn-lgn" to="/..">
+          <Link className="fixedNav_btn-lgn" to="/">
             <FiUser className="fixedNav_btn-lgn-icon" />
             Login
           </Link>
           <div className="fixedNav_doe">
-            <Link className="fixedNav_doe-now" to="/.">
+            <Link className="fixedNav_doe-now" to="/">
               Doe agora
             </Link>
           </div>
@@ -138,5 +132,10 @@ class NavFixed extends Component {
     );
   }
 }
+
+NavFixed.propTypes = {
+  rfs: PropTypes.objectOf(PropTypes.any).isRequired,
+  visible: PropTypes.bool.isRequired,
+};
 
 export default NavFixed;

@@ -1,9 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import figure from '../assets/image/imgAbout.svg';
 
-function About(props) {
+function About({ rfs }) {
   return (
-    <section ref={props.rfs} className="container">
+    <section ref={rfs} className="container">
+      <h2 className="about_article-title-mob">Sobre nós</h2>
       <div className="about">
         <article className="about_article">
           <h2 className="about_article-title">Sobre nós</h2>
@@ -28,5 +31,9 @@ function About(props) {
     </section>
   );
 }
+
+About.propTypes = {
+  rfs: PropTypes.objectOf(PropTypes.any).isRequired,
+};
 
 export default About;

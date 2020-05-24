@@ -1,6 +1,6 @@
 .storyTitle {
   text-align: center;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 4.8rem;
   color: $color-grey-dark;
   text-transform: uppercase;
@@ -21,7 +21,7 @@
 
   @include responsive(phone) {
     justify-content: center;
-    max-width: 98%;
+    max-width: 90%;
   }
 
   &_column {

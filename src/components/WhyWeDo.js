@@ -1,10 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import figure from '../assets/image/imgWhy.svg';
 import data from '../assets/image/imgZone.svg';
 
-function WhyWeDo(props) {
+function WhyWeDo({ rfs }) {
   return (
-    <section ref={props.rfs} className="container">
+    <section ref={rfs} className="container">
       <h2>Por quem fazemos</h2>
       <div className="who">
         <article className="who_article">
@@ -72,5 +74,9 @@ function WhyWeDo(props) {
     </section>
   );
 }
+
+WhyWeDo.propTypes = {
+  rfs: PropTypes.objectOf(PropTypes.any).isRequired,
+};
 
 export default WhyWeDo;

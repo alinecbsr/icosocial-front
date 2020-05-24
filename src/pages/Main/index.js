@@ -1,5 +1,5 @@
-/* eslint-disable no-unused-vars */
-import React, { Component, createRef } from 'react';
+import React, { Component } from 'react';
+
 import NavFixed from '../../components/NavFixed';
 import Hero from '../../components/Hero';
 import NavBar from '../../components/NavBar';
@@ -11,6 +11,16 @@ import Participate from '../../components/Participate';
 import Partners from '../../components/Partners';
 import FAQ from '../../components/Faq';
 import Footer from '../../components/Footer';
+
+import {
+  heroRef,
+  aboutRef,
+  byWhoRef,
+  participateRef,
+  partnersRef,
+  faqRef,
+  myRefs,
+} from '../../helpers/create-refs';
 
 import cocaCola from '../../assets/image/logomarcas/coca-cola.png';
 import facebook from '../../assets/image/logomarcas/facebook.png';
@@ -35,31 +45,16 @@ class Main extends Component {
     window.removeEventListener('scroll', this.onMoveScroll);
   }
 
-  onMoveScroll = (e) => {
+  onMoveScroll = () => {
     this.setState({ scrollTop: document.documentElement.scrollTop });
   };
 
   render() {
-    let isShow = false;
     const { scrollTop } = this.state;
-    const maxScroll = 751;
-    const heroRef = createRef();
-    const aboutRef = createRef();
-    const byWhoRef = createRef();
-    const participateRef = createRef();
-    const partnersRef = createRef();
-    const faqRef = createRef();
 
-    const myRefs = {
-      aboutRef,
-      partnersRef,
-      faqRef,
-      heroRef,
-      participateRef,
-      byWhoRef,
-    };
+    let isShow = false;
 
-    if (scrollTop >= maxScroll) {
+    if (scrollTop >= window.innerHeight) {
       isShow = true;
     } else {
       isShow = false;
@@ -76,7 +71,7 @@ class Main extends Component {
         <WhyWeDo rfs={byWhoRef} />
         <Participate rfs={participateRef} />
         <Partners
-          /* rfs={partnersRef} */
+          rfs={partnersRef}
           images={[
             cocaCola,
             facebook,

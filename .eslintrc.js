@@ -35,6 +35,10 @@ module.exports = {
     ],
     'react/jsx-props-no-spreading': [0],
     'global-require': 'off',
-    'no-unused-expressions': ['error', { allowTaggedTemplates: true }]
+    'no-unused-expressions': ['error', { allowTaggedTemplates: true }],
+    'jsx-a11y/no-noninteractive-element-interactions': 'off',
+    'jsx-a11y/click-events-have-key-events': 'off',
+    'react/no-deprecated': 'off',
+    'class-methods-use-this': ['off']
   },
 };

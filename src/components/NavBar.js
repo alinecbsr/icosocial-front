@@ -1,10 +1,8 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
-/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function NavBar({ rfs }) {
-  const { aboutRef, /* partnersRef, */ faqRef, participateRef, byWhoRef } = rfs;
+  const { aboutRef, partnersRef, faqRef, participateRef, byWhoRef } = rfs;
   const list = [
     {
       item: 'Sobre nós',
@@ -24,7 +22,7 @@ function NavBar({ rfs }) {
     },
     {
       item: 'Parceiros',
-      link: null /* partnersRef, */,
+      link: partnersRef,
     },
     {
       item: 'FAQ',
@@ -57,5 +55,9 @@ function NavBar({ rfs }) {
     </section>
   );
 }
+
+NavBar.propTypes = {
+  rfs: PropTypes.objectOf(PropTypes.any).isRequired,
+};
 
 export default NavBar;
