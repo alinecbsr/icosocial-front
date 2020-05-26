@@ -42,7 +42,7 @@ export default function Register() {
   return (
     <div className="register">
       <div className="register_content">
-        <section>
+        <section className="register_content-zone1">
           <img src={logo} alt="logo icósocial" />
           <h3>Cadastro</h3>
           <p>Faça parte, ajude pessoas a transformarem suas vidas.</p>
@@ -51,55 +51,62 @@ export default function Register() {
             Voltar para Home
           </Link>
         </section>
-
-        <form onSubmit={handleRegister}>
-          <input
-            placeholder="Nome"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          />
-          <input
-            type="Email"
-            placeholder="E-mail"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-          <input
-            placeholder="Senha"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-          <input
-            placeholder="Confirme sua senha"
-            value={confirmationPassword}
-            onChange={(e) => setConfirmationPassword(e.target.value)}
-          />
-          <div className="group">
+        <section className="register_content-zone2">
+          <form
+            className="register_content-zone2-form1"
+            onSubmit={handleRegister}
+          >
+            <input
+              placeholder="Nome"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
+            <input
+              type="Email"
+              placeholder="E-mail"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <input
+              placeholder="Senha"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+            <input
+              placeholder="Confirme sua senha"
+              value={confirmationPassword}
+              onChange={(e) => setConfirmationPassword(e.target.value)}
+            />
+          </form>
+          <form
+            className="register_content-zone2-form2"
+            onSubmit={handleRegister}
+          >
             <div className="group">
-              <input
-                className="group_check"
-                type="checkbox"
-                id="Pessoa física"
-                value={physical}
-                onChange={(e) => setPhysical(e.target.value)}
-              />
-              <p className="group_person">Pessoa física</p>
+              <label>
+                <input
+                  id="checkbox"
+                  type="checkbox"
+                  value={physical}
+                  onChange={(e) => setPhysical(e.target.value)}
+                />
+                Pessoa física
+              </label>
+              <label>
+                <input
+                  id="checkbox"
+                  type="checkbox"
+                  value={legal}
+                  onChange={(e) => setLegal(e.target.value)}
+                />
+                Pessoa jurídica
+              </label>
             </div>
-            <div className="group">
-              <input
-                className="group_check"
-                type="checkbox"
-                id="Pesso jurídica"
-                value={legal}
-                onChange={(e) => setLegal(e.target.value)}
-              />
-              <p className="group_person">Pesso jurídica</p>
-            </div>
-          </div>
-          <button className="button" type="submit">
-            Register
-          </button>
-        </form>
+            <button className="button" type="submit">
+              Register
+            </button>
+          </form>
+        </section>
       </div>
     </div>
   );
