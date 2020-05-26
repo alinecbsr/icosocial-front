@@ -1,23 +1,22 @@
 @import 'global/variables';
 @import 'global/responsive';
 @import 'global/placeholders';
-@import 'components/NavFixed';
-@import 'components/Participate';
-@import 'components/WhyWeDo';
-@import 'components/WhatWeDo';
-
-
 
 @import 'pages/Main';
+@import 'pages/Register';
 
-@import 'components/Faq';
 @import 'components/Hero';
 @import 'components/About';
+@import 'components/Definitions';
+@import 'components/OurStory';
+@import 'components/WhatWeDo';
+@import 'components/WhyWeDo';
+@import 'components/Participate';
+@import "components/Partners";
+@import 'components/Faq';
 @import "components/Footer";
 @import 'components/NavBar';
-@import 'components/OurStory';
-@import "components/Partners";
-@import 'components/Definitions';
+@import 'components/NavFixed';
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
