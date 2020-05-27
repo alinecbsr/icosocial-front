@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable no-alert */
 import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
@@ -103,8 +104,12 @@ export default function Register() {
               </label>
             </div>
             <button className="button" type="submit">
-              Register
+              Cadastrar
             </button>
+            <Link to="/">
+              <FiArrowLeft size={20} color="#B537FF" />
+              Voltar para Home
+            </Link>
           </form>
         </section>
       </div>

@@ -6,7 +6,17 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+
+  @include responsive(tab_medium) {
+    max-width: 100%;
+    height: 100vh;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
 
   &_content {
     width: 100%;
@@ -18,9 +28,26 @@
     align-items: center;
     justify-content: space-between;
 
+    @include responsive(tab_medium) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
     &-zone1 {
       width: 100%;
       max-width: 39rem;
+
+      @include responsive(tab_medium) {
+        max-width: 80%;
+        height: auto;
+        text-align: center;
+      }
 
       img {
         width: 21rem;
@@ -46,16 +73,20 @@
         align-items: center;
         margin-top: 4rem;
         color: $color-purple-clear;
-        font-size: 18px;
+        font-size: 1.8rem;
         font-weight: 600;
         text-decoration: none;
         transition: opacity 0.2s;
         margin-top: 20%;
         outline: none;
+
+        @include responsive(tab_medium) {
+          display: none;
+        }
       }
 
       a svg {
-        margin-right: 12px;
+        margin-right: 1.2rem;
       }
 
       a:hover {
@@ -64,14 +95,37 @@
     }
 
     &-zone2 {
+      max-width: 80%;
+      height: auto;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      @include responsive(phone) {
+        max-width: 95%;
+      }
+
       &-form1 {
         width: 100%;
         max-width: 44rem;
 
+        @include responsive(tab_medium) {
+          max-width: 60%;
+          height: auto;
+          text-align: center;
+          margin: 0;
+        }
+
+        @include responsive(phone) {
+          max-width: 100%;
+        }
+
         input {
           width: 100%;
           height: 6rem;
-          color: $color-grey-weak;
+          color: $color-green-full;
           font-size: 1.8rem;
           font-weight: 400;
           padding: 0 2.4rem;
@@ -88,6 +142,21 @@
       &-form2 {
         width: 100%;
         max-width: 44rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        @include responsive(tab_medium) {
+          max-width: 60%;
+          height: 100%;
+          text-align: center;
+          margin: 0;
+        }
+
+        @include responsive(phone) {
+          max-width: 100%;
+        }
 
         .group {
           width: 100%;
@@ -105,14 +174,19 @@
         input[type='checkbox']::before {
           content: ' ';
           outline: none;
-          min-width: 20px;
-          min-height: 20px;
+          min-width: 2rem;
+          min-height: 2rem;
           margin-left: -1.1rem;
           margin-top: -0.7rem;
           position: absolute;
           background-color: #fff;
           border: 1.5px solid #dcdce6;
           box-shadow: 0px 0px 8px rgba(181, 55, 255, 0.2);
+
+          @include responsive(tab_medium) {
+            margin-left: -0.4rem;
+            margin-top: 0;
+          }
         }
 
         input[type='checkbox']:checked::after {
@@ -126,6 +200,11 @@
           border-width: 0 3px 3px 0;
           position: absolute;
           transform: rotate(45deg);
+
+          @include responsive(tab_medium) {
+            margin-left: 0.3rem;
+            margin-top: 0.3rem;
+          }
         }
 
         label {
@@ -152,6 +231,17 @@
           text-decoration: none;
           transition: filter 0.2s;
           cursor: pointer;
+
+          @include responsive(tab_medium) {
+            max-width: 100%;
+            height: auto;
+            text-align: center;
+            margin-top: 3%;
+          }
+
+          @include responsive(phone) {
+            max-width: 100%;
+          }
         }
 
         button:hover {
@@ -159,6 +249,32 @@
           box-shadow: 0px 3px 6px rgba(234, 128, 252, 0.8);
           border: 1px solid #7159c1;
           transition: all 0.2s ease-in-out;
+        }
+
+        a {
+          display: none;
+
+          @include responsive(tab_medium) {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            color: $color-purple-clear;
+            font-size: 1.8rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: opacity 0.2s;
+            margin-top: 6%;
+            outline: none;
+          }
+        }
+
+        a svg {
+          margin-right: 12px;
+        }
+
+        a:hover {
+          opacity: 0.7;
         }
       }
     }
