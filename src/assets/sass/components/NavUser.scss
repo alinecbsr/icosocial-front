@@ -1,6 +1,8 @@
 .user {
   width: 100vw;
+  max-width: 128rem;
   height: auto;
+  border-radius: 8px;
 
   &_nav {
     display: flex;

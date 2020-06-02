@@ -1,0 +1,40 @@
+.home {
+  width: 100%;
+  height: 94rem;
+  position: relative;
+  background-image: url('../../image/hands.svg');
+  background-repeat: no-repeat;
+
+  &_gradient {
+    width: 100%;
+    height: 94rem;
+    margin-top: -1rem;
+    position: relative;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(255, 255, 255, 0.8869922969187675) 87%,
+      rgba(255, 255, 255, 1) 93%,
+      rgba(255, 255, 255, 1) 100%
+    );
+    z-index: 110;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    p {
+      max-width: 60%;
+      font-size: 4.8rem;
+      font-weight: 700;
+      line-height: 8rem;
+      letter-spacing: 2px;
+      text-indent: 4rem;
+      text-align: center;
+      text-transform: uppercase;
+      color: $color-purple-clear;
+      text-shadow: 1px 1px 3px $color-grey-dark;
+      margin-top: 20%;
+    }
+  }
+}

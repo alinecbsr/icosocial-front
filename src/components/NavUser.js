@@ -4,7 +4,7 @@ import { FiPower } from 'react-icons/fi';
 
 import logo from '../assets/image/logo1.svg';
 
-export default function UserHome() {
+export default function NavUser() {
   return (
     <header className="user">
       <nav className="user_nav">
