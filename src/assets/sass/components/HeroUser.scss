@@ -35,6 +35,14 @@
       color: $color-purple-clear;
       text-shadow: 1px 1px 3px $color-grey-dark;
       margin-top: 20%;
+
+      @include responsive(phone) {
+        font-size: 4rem;
+        font-weight: 500;
+        line-height: 6rem;
+        letter-spacing: 1px;
+        margin-top: 30%;
+      }
     }
   }
 }
