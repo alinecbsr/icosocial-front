@@ -7,7 +7,7 @@ import logo from '../assets/image/logo1.svg';
 
 import api from '../services/api';
 
-export default function ProfilePF() {
+export default function ProfilePJ() {
   const [name, setName] = useState('');
   const [fantasy, setFantasy] = useState('');
   const [cnpj, setCNPJ] = useState('');
