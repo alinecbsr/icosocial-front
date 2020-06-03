@@ -6,14 +6,15 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 // import RegisterConfirmation from './components/RegisterConfirmation';
 // import Login from './pages/Login';
 // import ProfileSelection from './components/ProfileSelection';
-import UserHome from './pages/UserHome';
+// import UserHome from './pages/UserHome';
+import ProfilePF from './components/ProfilePF';
 
 export default function Routes() {
   return (
     <BrowserRouter>
       <Switch>
         {/*  <Route path="/" exact component={Main} /> */}
-        <Route path="/" exact component={UserHome} />
+        <Route path="/" exact component={ProfilePF} />
       </Switch>
     </BrowserRouter>
   );
