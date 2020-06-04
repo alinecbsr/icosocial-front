@@ -6,7 +6,6 @@
 @import 'pages/Login';
 @import 'pages/UserHome';
 
-
 @import 'components/Hero';
 @import 'components/About';
 @import 'components/Definitions';
@@ -26,9 +25,7 @@
 @import 'components/Transparency';
 @import 'components/ProfilePJ';
 @import 'components/ProfilePF';
-
-
-
+@import 'components/ChangePassword';
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
@@ -243,4 +240,8 @@ html {
     box-shadow: none;
     width: 100%;
 	}
+}
+
+body.hideScroll {
+  overflow: hidden;
 }

@@ -1,7 +1,7 @@
 .register {
   width: 100%;
   max-width: 128rem;
-  height: 100vh;
+  height: 100%;
   margin: 0 auto;
   display: flex;
   flex-direction: row;
@@ -9,7 +9,7 @@
 
   @include responsive(tab_medium) {
     max-width: 100%;
-    height: 100vh;
+    height: 100%;
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
@@ -217,16 +217,16 @@
 
         button {
           width: 100%;
-          height: 60px;
+          height: 6rem;
           display: inline-block;
-          margin-top: 16px;
+          margin-top: 1.6rem;
           background: $color-purple-clear;
           color: $color-white;
           border: 0;
           border-radius: 8px;
           font-weight: 600;
-          font-size: 18px;
-          line-height: 60px;
+          font-size: 1.8rem;
+          line-height: 6rem;
           text-align: center;
           text-decoration: none;
           transition: filter 0.2s;
@@ -264,7 +264,7 @@
             font-weight: 600;
             text-decoration: none;
             transition: opacity 0.2s;
-            margin-top: 6%;
+            margin: 6% 0 6% 0;
             outline: none;
           }
         }
