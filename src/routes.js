@@ -8,6 +8,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 // import ProfileSelection from './components/ProfileSelection';
 // import UserHome from './pages/UserHome';
 // import ProfilePJ from './components/ProfilePJ';
+// import ChangePassword from './components/ChangePassword';
 import ProfilePF from './components/ProfilePF';
 
 export default function Routes() {

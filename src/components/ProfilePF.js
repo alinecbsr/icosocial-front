@@ -1,13 +1,16 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable no-alert */
 import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { FiArrowLeft } from 'react-icons/fi';
 import logo from '../assets/image/logo1.svg';
+import ChangePassword from './ChangePassword';
 
 import api from '../services/api';
 
 export default function ProfilePJ() {
+  const [showModal, setShowModal] = useState(false);
   const [name, setName] = useState('');
   const [cpf, setCPF] = useState('');
   const [date, setDate] = useState('');
@@ -52,15 +55,29 @@ export default function ProfilePJ() {
     }
   }
 
+  function openModal(e) {
+    e.preventDefault();
+    setShowModal(true);
+    document.querySelector('body').classList.toggle('hideScroll');
+  }
+
+  function closeModal(e) {
+    if (e) e.preventDefault();
+    setShowModal(false);
+    document.querySelector('body').classList.toggle('hideScroll');
+  }
+
   return (
     <div className="profile">
+      <ChangePassword show={showModal} close={closeModal} />
       <div className="profile_content">
         <section className="profile_content-zone1">
           <img src={logo} alt="logo icósocial" />
           <h3>Meu Perfil</h3>
-          <Link className="password" to="/">
+          <a href="#" className="password" onClick={openModal}>
             Alterar minha senha
-          </Link>
+          </a>
+
           <div className="back">
             <Link className="back_to" to="/">
               <FiArrowLeft size={20} color="#B537FF" />
@@ -166,7 +183,7 @@ export default function ProfilePJ() {
             onSubmit={handleProfilePF}
           >
             <button className="button" type="submit">
-              Cadastrar
+              Salvar
             </button>
             <Link to="/">
               <FiArrowLeft size={20} color="#B537FF" />

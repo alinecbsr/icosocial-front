@@ -166,7 +166,7 @@ export default function ProfilePJ() {
             onSubmit={handleProfilePF}
           >
             <button className="button" type="submit">
-              Cadastrar
+              Salvar
             </button>
             <Link to="/">
               <FiArrowLeft size={20} color="#B537FF" />
