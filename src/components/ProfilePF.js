@@ -6,11 +6,13 @@ import { Link, useHistory } from 'react-router-dom';
 import { FiArrowLeft } from 'react-icons/fi';
 import logo from '../assets/image/logo1.svg';
 import ChangePassword from './ChangePassword';
+import Confirmation from './Confirmation';
 
 import api from '../services/api';
 
 export default function ProfilePJ() {
   const [showModal, setShowModal] = useState(false);
+  const [showConfirmation, setShowConfirmation] = useState(false);
   const [name, setName] = useState('');
   const [cpf, setCPF] = useState('');
   const [date, setDate] = useState('');
@@ -67,10 +69,23 @@ export default function ProfilePJ() {
     document.querySelector('body').classList.toggle('hideScroll');
   }
 
+  function openConfirmation(e) {
+    e.preventDefault();
+    setShowConfirmation(true);
+    document.querySelector('body').classList.toggle('hideScroll');
+  }
+
+  function closeConfirmation(e) {
+    if (e) e.preventDefault();
+    setShowConfirmation(false);
+    document.querySelector('body').classList.toggle('hideScroll');
+  }
+
   return (
     <div className="profile">
       <ChangePassword show={showModal} close={closeModal} />
       <div className="profile_content">
+        <Confirmation show={showConfirmation} close={closeConfirmation} />
         <section className="profile_content-zone1">
           <img src={logo} alt="logo icósocial" />
           <h3>Meu Perfil</h3>
@@ -182,7 +197,7 @@ export default function ProfilePJ() {
             className="profile_content-zone2-form2"
             onSubmit={handleProfilePF}
           >
-            <button className="button" type="submit">
+            <button className="button" type="submit" onClick={openConfirmation}>
               Salvar
             </button>
             <Link to="/">
