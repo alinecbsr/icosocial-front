@@ -107,10 +107,10 @@ class NavFixed extends Component {
           </ul>
         </nav>
         <div className="fixedNav_btn">
-          <Link className="fixedNav_btn-rgt" to="/">
+          <Link className="fixedNav_btn-rgt" to="/signup">
             Cadastro
           </Link>
-          <Link className="fixedNav_btn-lgn" to="/">
+          <Link className="fixedNav_btn-lgn" to="/signin">
             <FiUser className="fixedNav_btn-lgn-icon" />
             Login
           </Link>
