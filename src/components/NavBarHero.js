@@ -16,10 +16,10 @@ function NavBarHero({ logo }) {
           />
         </Link>
         <div className="banner_header-btn">
-          <Link className="banner_header-btn-rgt" to="/">
+          <Link className="banner_header-btn-rgt" to="/signup">
             Cadastro
           </Link>
-          <Link className="banner_header-btn-lgn" to="/">
+          <Link className="banner_header-btn-lgn" to="/signin">
             <FiUser className="banner_header-btn-lgn-icon" />
             Login
           </Link>

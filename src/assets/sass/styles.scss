@@ -13,9 +13,9 @@
 @import 'components/WhatWeDo';
 @import 'components/WhyWeDo';
 @import 'components/Participate';
-@import "components/Partners";
+@import 'components/Partners';
 @import 'components/Faq';
-@import "components/Footer";
+@import 'components/Footer';
 @import 'components/NavBar';
 @import 'components/NavFixed';
 @import 'components/RegisterConfirmation';
@@ -27,6 +27,7 @@
 @import 'components/ProfilePF';
 @import 'components/ChangePassword';
 @import 'components/Confirmation';
+@import 'components/ConfirmEmail';
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
@@ -156,6 +157,29 @@
   border-spacing: 0;
 }
 
+html {
+  // this defines what 1rem is --> font root size
+  font-size: 62.5%; // 10/16, 1rem = 10px;
+  text-rendering: optimizelegibility;
+  -webkit-font-smoothing: antialiased;
+
+  @include responsive(tab_medium) {
+    font-size: 50%;
+  }
+
+  @include responsive(tab_port) {
+    font-size: 50%;
+  }
+
+  @include responsive(tablet) {
+    font-size: 40%;
+  }
+
+  @include responsive(phone) {
+    font-size: 40%;
+  }
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   background-color: $color-white;
@@ -169,27 +193,8 @@ body {
   outline: 0;
 }
 
-html {
-  // this defines what 1rem is --> font root size
-  font-size: 62.5%; // 10/16, 1rem = 10px;
-  text-rendering: optimizelegibility;
-  -webkit-font-smoothing: antialiased;
-
-  @include responsive(tab_medium) {
-		font-size: 50%;
-  }
-
-	@include responsive(tab_port) {
-		font-size: 50%;
-  }
-
-  @include responsive(tablet) {
-		font-size: 40%;
-  }
-
-  @include responsive(phone) {
-		font-size: 40%;
-	}
+body.hideScroll {
+  overflow: hidden;
 }
 
 .App {
@@ -231,18 +236,16 @@ html {
   background-color: $color-grey-weak;
   margin: 0;
   padding-top: 4rem;
-  box-shadow:
-  0 -0px white,
-  0 0px white,
-  -7px 0 4px -3px rgba(0, 0, 0, 0.1),
-  7px 0 4px -3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 -0px white, 0 0px white, -7px 0 4px -3px rgba(0, 0, 0, 0.1),
+    7px 0 4px -3px rgba(0, 0, 0, 0.1);
 
   @include responsive(phone) {
     box-shadow: none;
     width: 100%;
-	}
+  }
 }
 
-body.hideScroll {
-  overflow: hidden;
+.toast {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
 }

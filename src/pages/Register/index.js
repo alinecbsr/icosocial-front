@@ -1,42 +1,74 @@
-/* eslint-disable jsx-a11y/label-has-associated-control */
-/* eslint-disable no-alert */
 import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { FiArrowLeft } from 'react-icons/fi';
+import {
+  ToastsContainer,
+  ToastsStore,
+  ToastsContainerPosition,
+} from 'react-toasts';
+
 import logo from '../../assets/image/logo1.svg';
 
 import api from '../../services/api';
 
+import capitalizeFirstLetter from '../../helpers/capitalizeFirstLetter';
+
 export default function Register() {
+  const [selectedOption, setSelectedOption] = useState(false);
+
   const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
+  const [login, setLogin] = useState('');
   const [password, setPassword] = useState('');
   const [confirmationPassword, setConfirmationPassword] = useState('');
-  const [physical, setPhysical] = useState('');
-  const [legal, setLegal] = useState('');
 
   const history = useHistory();
+
+  function handleOptionChange(e) {
+    setSelectedOption(e.target.value);
+  }
 
   async function handleRegister(e) {
     e.preventDefault();
 
+    if (password !== confirmationPassword) {
+      ToastsStore.error('Password does not match', 5000, 'toast');
+      return;
+    }
+
+    if (!selectedOption) {
+      ToastsStore.error('Person is not informed', 5000, 'toast');
+      return;
+    }
+
     const data = {
+      login,
       name,
-      email,
       password,
-      confirmationPassword,
-      physical,
-      legal,
+      person: selectedOption,
     };
 
-    try {
-      const response = await api.post('ongs', data);
+    const response = await api.post('/users', data);
 
-      alert(`Registration successful! Your access ID: ${response.data.id}`);
+    if (response.data.error) {
+      ToastsStore.error(
+        capitalizeFirstLetter(response.data.error),
+        5000,
+        'toast'
+      );
+    }
 
-      history.push('/');
-    } catch (err) {
-      alert('Error in registration, try again!');
+    if (response.data.messages) {
+      response.data.messages.forEach((error) => {
+        error.errors.forEach((msg) => {
+          ToastsStore.error(capitalizeFirstLetter(msg), 5000, 'toast');
+        });
+      });
+    }
+
+    if (response.data.error == null) {
+      localStorage.setItem('user.email', response.data.login);
+      history.push('/signup/confirmation');
+      setSelectedOption('');
     }
   }
 
@@ -53,6 +85,10 @@ export default function Register() {
           </Link>
         </section>
         <section className="register_content-zone2">
+          <ToastsContainer
+            store={ToastsStore}
+            position={ToastsContainerPosition.TOP_RIGHT}
+          />
           <form
             className="register_content-zone2-form1"
             onSubmit={handleRegister}
@@ -65,20 +101,23 @@ export default function Register() {
             <input
               type="Email"
               placeholder="E-mail"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              value={login}
+              onChange={(e) => setLogin(e.target.value)}
             />
             <input
+              type="password"
               placeholder="Senha"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
             <input
+              type="password"
               placeholder="Confirme sua senha"
               value={confirmationPassword}
               onChange={(e) => setConfirmationPassword(e.target.value)}
             />
           </form>
+
           <form
             className="register_content-zone2-form2"
             onSubmit={handleRegister}
@@ -88,8 +127,9 @@ export default function Register() {
                 <input
                   id="checkbox"
                   type="checkbox"
-                  value={physical}
-                  onChange={(e) => setPhysical(e.target.value)}
+                  value="PHYSICAL"
+                  checked={selectedOption === 'PHYSICAL'}
+                  onChange={(e) => handleOptionChange(e)}
                 />
                 Pessoa física
               </label>
@@ -97,8 +137,9 @@ export default function Register() {
                 <input
                   id="checkbox"
                   type="checkbox"
-                  value={legal}
-                  onChange={(e) => setLegal(e.target.value)}
+                  value="LEGAL"
+                  checked={selectedOption === 'LEGAL'}
+                  onChange={(e) => handleOptionChange(e)}
                 />
                 Pessoa jurídica
               </label>
