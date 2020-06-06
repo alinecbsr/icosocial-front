@@ -27,6 +27,7 @@
 @import 'components/ProfilePF';
 @import 'components/ChangePassword';
 @import 'components/Confirmation';
+@import 'components/ConfirmEmail';
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
@@ -244,11 +245,7 @@ body.hideScroll {
   }
 }
 
-.toast-error {
+.toast {
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
-}
-
-.toast-error:first-of-type {
-  text-transform: capitalize;
 }

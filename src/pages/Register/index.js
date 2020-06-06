@@ -10,10 +10,11 @@ import {
 import logo from '../../assets/image/logo1.svg';
 
 import api from '../../services/api';
+
 import capitalizeFirstLetter from '../../helpers/capitalizeFirstLetter';
 
 export default function Register() {
-  const [selectedOption, setSelectedOption] = useState('');
+  const [selectedOption, setSelectedOption] = useState(false);
 
   const [name, setName] = useState('');
   const [login, setLogin] = useState('');
@@ -30,12 +31,13 @@ export default function Register() {
     e.preventDefault();
 
     if (password !== confirmationPassword) {
-      ToastsStore.error('Password does not match', 5000);
+      ToastsStore.error('Password does not match', 5000, 'toast');
       return;
     }
 
     if (!selectedOption) {
-      ToastsStore.error('Person is not informed', 5000);
+      ToastsStore.error('Person is not informed', 5000, 'toast');
+      return;
     }
 
     const data = {
@@ -45,21 +47,29 @@ export default function Register() {
       person: selectedOption,
     };
 
-    const response = await api.post('/api/v1/users', data);
+    const response = await api.post('/users', data);
 
     if (response.data.error) {
-      ToastsStore.error(capitalizeFirstLetter(response.data.error), 5000);
+      ToastsStore.error(
+        capitalizeFirstLetter(response.data.error),
+        5000,
+        'toast'
+      );
     }
 
     if (response.data.messages) {
       response.data.messages.forEach((error) => {
         error.errors.forEach((msg) => {
-          ToastsStore.error(capitalizeFirstLetter(msg), 5000);
+          ToastsStore.error(capitalizeFirstLetter(msg), 5000, 'toast');
         });
       });
     }
 
-    if (response.data.error == null) history.push('/');
+    if (response.data.error == null) {
+      localStorage.setItem('user.email', response.data.login);
+      history.push('/signup/confirmation');
+      setSelectedOption('');
+    }
   }
 
   return (

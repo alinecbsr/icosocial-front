@@ -40,10 +40,12 @@ class Main extends Component {
   }
 
   componentDidMount() {
+    localStorage.removeItem('user.email');
     window.addEventListener('scroll', this.onMoveScroll);
   }
 
   componentWillUnmount() {
+    localStorage.removeItem('user.email');
     window.removeEventListener('scroll', this.onMoveScroll);
   }
 
