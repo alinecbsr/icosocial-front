@@ -16,7 +16,6 @@
     }
 
     &-right {
-      width: 100%;
       max-width: 43rem;
       display: flex;
       justify-content: space-between;
@@ -38,10 +37,11 @@
     }
 
     span {
+      width: 50rem;
+      margin-left: 4rem;
       font-size: 2rem;
       line-height: 1.8rem;
       font-weight: 600;
-      text-decoration: none;
       color: $color-grey-dark;
 
       @include responsive(phone) {

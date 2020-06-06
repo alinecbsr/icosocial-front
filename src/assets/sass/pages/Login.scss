@@ -1,11 +1,12 @@
 .tela {
-  width: 100%;
-  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  padding: 5% 12%;
+  padding: 0 12% 0 12%;
 
   @include responsive(tab_medium) {
     width: 100vw;
@@ -47,7 +48,6 @@
     max-width: 35rem;
     border: 1.5px solid $color-grey-full;
     border-radius: 8px;
-    text-transform: capitalize;
     color: $color-grey-medium;
     font-size: 1.8rem;
     line-height: 2.5rem;
