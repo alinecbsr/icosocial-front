@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useParams, useHistory } from 'react-router-dom';
+import { useParams, NavLink } from 'react-router-dom';
 import { FiCheck } from 'react-icons/fi';
 
 import {
@@ -8,10 +8,9 @@ import {
   ToastsContainerPosition,
 } from 'react-toasts';
 
-import api from '../services/api';
+import api from '../../services/api';
 
 function ConfirmEmail() {
-  const history = useHistory();
   const { email } = useParams();
 
   useEffect(() => {
@@ -25,9 +24,6 @@ function ConfirmEmail() {
           'toast'
         )
       );
-    setInterval(() => {
-      history.push('/signin');
-    }, 4000);
   });
 
   return (
@@ -36,10 +32,13 @@ function ConfirmEmail() {
         store={ToastsStore}
         position={ToastsContainerPosition.TOP_RIGHT}
       />
-      <h3>Sua Conta está ativa! Redirecionando para página de login...</h3>
+      <h3>Sua Conta está ativa!</h3>
       <div className="box">
         <FiCheck size={100} />
       </div>
+      <NavLink to="/signin" className="confirm__link">
+        Faça Login agora!
+      </NavLink>
     </div>
   );
 }

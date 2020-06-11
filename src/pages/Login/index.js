@@ -41,7 +41,13 @@ export default function Login() {
       localStorage.setItem('user', JSON.stringify(response.data.user));
       localStorage.setItem('token', response.data.token);
       localStorage.removeItem('user.email');
-      history.push('/dashboard');
+
+      if (response.data.user.first_access) {
+        await api.post('/users/fist-access');
+        history.push('/profile-selector');
+      } else {
+        history.push('/dashboard');
+      }
     }
   }
 
@@ -74,18 +80,18 @@ export default function Login() {
           login
         </button>
 
-        <Link className="login_link1" to="/">
+        <Link className="login_link1" to="/password">
           Esqueceu seu nome de usuário / senha?
         </Link>
 
-        <p to="/">Ou faça login com</p>
+        <p>Ou faça login com</p>
 
         <div className="login_social">
-          <Link className="login_social-btn" to="/">
+          <Link className="login_social-btn" to="/facebook">
             <img src={facebook} alt="logo facebook" />
             Facebook
           </Link>
-          <Link className="login_social-btn" to="/">
+          <Link className="login_social-btn" to="/google">
             <img src={google} alt="logo google" />
             Google
           </Link>

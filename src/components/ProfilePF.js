@@ -10,7 +10,7 @@ import Confirmation from './Confirmation';
 
 import api from '../services/api';
 
-export default function ProfilePJ() {
+export default function ProfilePF() {
   const [showModal, setShowModal] = useState(false);
   const [showConfirmation, setShowConfirmation] = useState(false);
   const [name, setName] = useState('');
@@ -94,9 +94,9 @@ export default function ProfilePJ() {
           </a>
 
           <div className="back">
-            <Link className="back_to" to="/">
+            <Link className="back_to" to="/dashboard">
               <FiArrowLeft size={20} color="#B537FF" />
-              Voltar para Home
+              Voltar para Dashboard
             </Link>
           </div>
         </section>
@@ -200,9 +200,9 @@ export default function ProfilePJ() {
             <button className="button" type="submit" onClick={openConfirmation}>
               Salvar
             </button>
-            <Link to="/">
+            <Link to="/dashboard">
               <FiArrowLeft size={20} color="#B537FF" />
-              Voltar para Home
+              Voltar para Dashboard
             </Link>
           </form>
         </section>
