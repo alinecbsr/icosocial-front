@@ -41,7 +41,7 @@ function About({ rfs }) {
               Saiba mais
             </button>
           </article>
-          <img /* className="about_abt" */ src={figure} alt="figure" />
+          <img className="about_abt" src={figure} alt="figure" />
         </div>
       </section>
       <Definition show={showKnowMore} />

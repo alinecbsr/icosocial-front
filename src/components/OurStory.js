@@ -24,7 +24,7 @@ function OurStory(props) {
                 alt="icon calendar"
               />
             </div>
-            <h3>Loren Ipsum</h3>
+            <h3>Como nasceu o Icósocial</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
               congue quis justo et ultricies. Etiam posuere nisl velit, eget
@@ -38,11 +38,11 @@ function OurStory(props) {
             <div className="story_space2-icon">
               <img
                 className="story_space2-icon-figure"
-                src={iconHand}
+                src={iconLocation}
                 alt="icon hand"
               />
             </div>
-            <h3>Loren Ipsum</h3>
+            <h3>Onde começamos </h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
               congue quis justo et ultricies. Etiam posuere nisl velit, eget
@@ -60,11 +60,11 @@ function OurStory(props) {
             <div className="story_space2-icon">
               <img
                 className="story_space2-icon-figure"
-                src={iconLocation}
+                src={iconHand}
                 alt="icon location"
               />
             </div>
-            <h3>Loren Ipsum</h3>
+            <h3>O que motivou o projeto</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
               congue quis justo et ultricies. Etiam posuere nisl velit, eget
@@ -81,7 +81,7 @@ function OurStory(props) {
                 alt="icon heart"
               />
             </div>
-            <h3>Loren Ipsum</h3>
+            <h3>O amor que nos inspira</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
               congue quis justo et ultricies. Etiam posuere nisl velit, eget

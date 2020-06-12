@@ -6,7 +6,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding-bottom: 4rem;
+  padding: 5% 0 0 0;
 
   @include responsive(tab_medium) {
     flex-direction: column;

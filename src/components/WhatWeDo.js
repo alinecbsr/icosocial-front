@@ -8,11 +8,22 @@ import React, { useState } from 'react';
 import Modal from './Modal';
 import Conteudo01 from './inners/whatwedo/content01';
 import Conteudo02 from './inners/whatwedo/content02';
+import Conteudo03 from './inners/whatwedo/content03';
+import Conteudo04 from './inners/whatwedo/content04';
+import Conteudo05 from './inners/whatwedo/content05';
+import Conteudo06 from './inners/whatwedo/content06';
 
 function WhatWeDo(props) {
   const [showModal, setShowModal] = useState(false);
   const [activeContent, setActiveContent] = useState('');
-  const conteudos = [<Conteudo01 />, <Conteudo02 />];
+  const conteudos = [
+    <Conteudo01 />,
+    <Conteudo02 />,
+    <Conteudo03 />,
+    <Conteudo04 />,
+    <Conteudo05 />,
+    <Conteudo06 />,
+  ];
 
   const loadModalContent = function (index = 0) {
     setActiveContent(conteudos[index]);
@@ -54,7 +65,7 @@ function WhatWeDo(props) {
             </div>
           </div>
 
-          <div className="cards_area">
+          <div className="cards_area" onClick={() => loadModalContent(2)}>
             <div className="cards_area-image3" />
             <div className="cards_area-text1">
               <p className="cards_area-text1-single">Núcleo</p>
@@ -62,7 +73,7 @@ function WhatWeDo(props) {
             </div>
           </div>
 
-          <div className="cards_area">
+          <div className="cards_area" onClick={() => loadModalContent(3)}>
             <div className="cards_area-image4" />
             <div className="cards_area-text2">
               <p className="cards_area-text2-single">Núcleo</p>
@@ -70,7 +81,7 @@ function WhatWeDo(props) {
             </div>
           </div>
 
-          <div className="cards_area">
+          <div className="cards_area" onClick={() => loadModalContent(4)}>
             <div className="cards_area-image5" />
             <div className="cards_area-text1">
               <p className="cards_area-text1-single">Núcleo</p>
@@ -78,7 +89,7 @@ function WhatWeDo(props) {
             </div>
           </div>
 
-          <div className="cards_area">
+          <div className="cards_area" onClick={() => loadModalContent(5)}>
             <div className="cards_area-image6" />
             <div className="cards_area-text2">
               <p className="cards_area-text2-single">Núcleo</p>

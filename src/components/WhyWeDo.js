@@ -2,7 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import figure from '../assets/image/imgWhy.svg';
-import data from '../assets/image/imgZone.svg';
+import school from '../assets/image/icon-school.svg';
+import income from '../assets/image/icon-public.svg';
+import money from '../assets/image/icon-money.svg';
 
 function WhyWeDo({ rfs }) {
   return (
@@ -24,7 +26,7 @@ function WhyWeDo({ rfs }) {
 
         <div className="weDo">
           <div className="zone">
-            <img className="zone_img" src={data} alt="icon data" />
+            <img className="zone_img" src={school} alt="icon data" />
             <p className="zone_text">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
               congue quis justo et ultricies. Etiam posuere nisl velit, eget
@@ -38,7 +40,7 @@ function WhyWeDo({ rfs }) {
           </div>
 
           <div className="zone">
-            <img className="zone_img" src={data} alt="icon data" />
+            <img className="zone_img" src={income} alt="icon data" />
             <p className="zone_text">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
               congue quis justo et ultricies. Etiam posuere nisl velit, eget
@@ -52,7 +54,7 @@ function WhyWeDo({ rfs }) {
           </div>
 
           <div className="zone">
-            <img className="zone_img" src={data} alt="icon data" />
+            <img className="zone_img" src={money} alt="icon data" />
             <p className="zone_text">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
               congue quis justo et ultricies. Etiam posuere nisl velit, eget
