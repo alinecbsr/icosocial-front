@@ -6,7 +6,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding-bottom: 4rem;
+  padding: 5% 0 0 0;
 
   @include responsive(tab_medium) {
     flex-direction: column;
@@ -53,4 +53,12 @@
     padding: 0 1rem 3rem 1rem;
     color: $color-grey-dark;
   }
+}
+
+#definition {
+  display: none;
+}
+
+.show {
+  display: flex!important;
 }

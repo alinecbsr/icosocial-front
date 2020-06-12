@@ -4,8 +4,6 @@ import NavFixed from '../../components/NavFixed';
 import Hero from '../../components/Hero';
 import NavBar from '../../components/NavBar';
 import About from '../../components/About';
-import Definitions from '../../components/Definitions';
-import OurStory from '../../components/OurStory';
 import WhatWeDo from '../../components/WhatWeDo';
 import WhyWeDo from '../../components/WhyWeDo';
 import Participate from '../../components/Participate';
@@ -70,8 +68,6 @@ class Main extends Component {
         <Hero rfs={heroRef} />
         <NavBar rfs={myRefs} />
         <About rfs={aboutRef} />
-        <Definitions />
-        <OurStory />
         <WhatWeDo rfs={byWhatRef} />
         <WhyWeDo rfs={byWhoRef} />
         <Participate rfs={participateRef} />

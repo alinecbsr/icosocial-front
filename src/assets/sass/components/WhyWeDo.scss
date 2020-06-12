@@ -6,6 +6,10 @@ h2 {
   text-transform: uppercase;
   text-align: center;
   padding-top: 10%;
+
+  @include responsive(phone) {
+    width: 85%;
+  }
 }
 
 .who {

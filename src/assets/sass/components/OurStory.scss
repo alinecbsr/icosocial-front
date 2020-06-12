@@ -2,6 +2,7 @@
   text-align: center;
   font-weight: 600;
   font-size: 4.8rem;
+  padding-bottom: 5%;
   color: $color-grey-dark;
   text-transform: uppercase;
 }
@@ -93,7 +94,7 @@
 
     h3 {
       font-size: 2.8rem;
-      color: $color-purple-dark;
+      color: $color-green-full;
 
       @include responsive(tab_medium) {
         text-align: center;
@@ -174,7 +175,7 @@
 
     h3 {
       font-size: 2.8rem;
-      color: $color-purple-dark;
+      color: $color-green-full;
 
       @include responsive(tab_medium) {
         text-align: center;
@@ -189,4 +190,12 @@
     color: $color-grey-dark;
     }
   }
+}
+
+#definition {
+  display: none;
+}
+
+.show {
+  display: flex!important;
 }
