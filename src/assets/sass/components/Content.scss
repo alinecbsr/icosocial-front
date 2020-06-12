@@ -1,0 +1,61 @@
+h1 {
+  text-align: center;
+  margin: 0;
+  font-weight: 600;
+  font-size: 4.8rem;
+  color: $color-green-full;
+  text-transform: uppercase;
+}
+
+.core {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3%;
+
+  @include responsive(tab_medium) {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  &_1 {
+    width: 100%;
+    max-width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5% 0;
+
+    @include responsive(phone) {
+      max-width: 90%;
+    }
+
+    p {
+      display: flex;
+      flex-wrap: wrap;
+      color: $color-grey-dark;
+      font-size: 1.8rem;
+      font-weight: 300;
+      text-align: justify;
+      text-indent: 3rem;
+    }
+  }
+
+  &_2 {
+    width: 100%;
+    max-width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include responsive(phone) {
+      max-width: 90%;
+    }
+
+    img {
+      @include responsive(phone) {
+        max-width: 100%;
+      }
+    }
+  }
+}

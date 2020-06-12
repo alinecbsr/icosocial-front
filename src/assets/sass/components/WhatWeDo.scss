@@ -8,6 +8,10 @@
   text-align: justify;
   text-indent: 3rem;
   margin-top: 4%;
+
+  @include responsive(phone) {
+    width: 90%;
+  }
 }
 
 .cards {
