@@ -1,8 +1,12 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable react/destructuring-assignment */
 import React from 'react';
 
-function Definitions() {
+function Definitions(props) {
+  const className = props.show ? 'show' : '';
+
   return (
-    <section className="container">
+    <section id="definition" className={`container ${className}`}>
       <div className="define">
         <div className="card">
           <h2 className="card_title">Missão</h2>

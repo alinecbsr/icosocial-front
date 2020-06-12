@@ -1,3 +1,5 @@
+/* eslint-disable react/destructuring-assignment */
+/* eslint-disable react/prop-types */
 import React from 'react';
 
 import iconCalendar from '../assets/image/icon-calendar.svg';
@@ -6,9 +8,11 @@ import iconLocation from '../assets/image/icon-location.svg';
 import iconHeart from '../assets/image/icon-heart.svg';
 import timeLine from '../assets/image/timeLine.svg';
 
-function OurStory() {
+function OurStory(props) {
+  const className = props.show ? 'show' : '';
+
   return (
-    <section className="container">
+    <section id="definition" className={`container ${className}`}>
       <h2 className="storyTitle">Nossa História</h2>
       <div className="story">
         <div className="story_column">

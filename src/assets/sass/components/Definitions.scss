@@ -54,3 +54,11 @@
     color: $color-grey-dark;
   }
 }
+
+#definition {
+  display: none;
+}
+
+.show {
+  display: flex!important;
+}
