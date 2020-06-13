@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 import participate from '../assets/image/participate.svg';
@@ -17,12 +18,9 @@ function Participate({ rfs }) {
             sed, pulvinar id libero. Aenean neque nulla”
           </p>
           <p className="participate_article1-text2"> Someone (ONG Volunteer)</p>
-          <button
-            className="participate_article1-btn-participate"
-            type="submit"
-          >
+          <Link className="participate_article1-btn-participate" to="/signup">
             Seja um voluntário
-          </button>
+          </Link>
         </article>
         <article className="participate_article2">
           <p className="participate_article2-text1">
@@ -35,12 +33,9 @@ function Participate({ rfs }) {
             amet maximus urna. Etiam ac diam tincidunt, convallis neque et,
             pharetra metus. Vivamus vulputate facilisis nulla et euismod.
           </p>
-          <button
-            className="participate_article2-btn-participate"
-            type="submit"
-          >
+          <Link className="participate_article2-btn-participate" to="/signup">
             Seja um doador
-          </button>
+          </Link>
         </article>
       </div>
     </section>

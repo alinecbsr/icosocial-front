@@ -8,9 +8,9 @@ import {
   ToastsContainerPosition,
 } from 'react-toasts';
 
-import logo from '../assets/image/logo1.svg';
+import logo from '../../assets/image/logo1.svg';
 
-import api from '../services/api';
+import api from '../../services/api';
 
 export default function RegisterConfirmation() {
   const email = localStorage.getItem('user.email');
