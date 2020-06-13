@@ -93,9 +93,9 @@ export default function ProfilePJ() {
             Alterar minha senha
           </a>
           <div className="back">
-            <Link className="back_to" to="/">
+            <Link className="back_to" to="/dashboard">
               <FiArrowLeft size={20} color="#B537FF" />
-              Voltar para Home
+              Voltar para Dashboard
             </Link>
           </div>
         </section>
@@ -199,9 +199,9 @@ export default function ProfilePJ() {
             <button className="button" type="submit" onClick={openConfirmation}>
               Salvar
             </button>
-            <Link to="/">
+            <Link to="/dashboard">
               <FiArrowLeft size={20} color="#B537FF" />
-              Voltar para Home
+              Voltar para o Dashboard
             </Link>
           </form>
         </section>

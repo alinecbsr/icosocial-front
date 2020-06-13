@@ -40,6 +40,7 @@ module.exports = {
     'jsx-a11y/click-events-have-key-events': 'off',
     'jsx-a11y/label-has-associated-control': 'off',
     'react/no-deprecated': 'off',
-    'class-methods-use-this': ['off']
+    'class-methods-use-this': ['off'],
+    'react/jsx-no-target-blank': 'off'
   },
 };

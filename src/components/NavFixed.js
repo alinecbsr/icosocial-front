@@ -115,9 +115,13 @@ class NavFixed extends Component {
             Login
           </Link>
           <div className="fixedNav_doe">
-            <Link className="fixedNav_doe-now" to="/">
+            <a
+              className="fixedNav_doe-now"
+              href="https://pagseguro.uol.com.br/#rmcl"
+              target="_blank"
+            >
               Doe agora
-            </Link>
+            </a>
           </div>
           <div className="fixedNav_mobile">
             <button

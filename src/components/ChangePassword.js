@@ -6,8 +6,15 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { FiArrowLeft } from 'react-icons/fi';
+import {
+  ToastsContainer,
+  ToastsStore,
+  ToastsContainerPosition,
+} from 'react-toasts';
 
 import api from '../services/api';
+
+import capitalizeFirstLetter from '../helpers/capitalizeFirstLetter';
 
 export default function ChangePassword(props) {
   const [currentPassword, setCurrentPassword] = useState('');
@@ -16,23 +23,42 @@ export default function ChangePassword(props) {
 
   const history = useHistory();
 
-  async function handleRegister(e) {
+  async function handleChangePassword(e) {
     e.preventDefault();
 
+    if (newPassword !== confirmationPassword) {
+      ToastsStore.error('Passwords are not the same', 5000, 'toast');
+      return;
+    }
+
     const data = {
-      currentPassword,
-      newPassword,
-      confirmationPassword,
+      password: newPassword,
+      oldPassword: currentPassword,
     };
 
-    try {
-      const response = await api.post('ongs', data);
+    console.log(data);
+    const response = await api.put('/users/passwd/update', data);
 
-      alert(`Registration successful! Your access ID: ${response.data.id}`);
+    if (response.data.error) {
+      ToastsStore.error(
+        capitalizeFirstLetter(response.data.error),
+        5000,
+        'toast'
+      );
+    }
 
-      history.push('/');
-    } catch (err) {
-      alert('Error in registration, try again!');
+    if (response.data.messages) {
+      response.data.messages.forEach((error) => {
+        error.errors.forEach((msg) => {
+          ToastsStore.error(capitalizeFirstLetter(msg), 5000, 'toast');
+        });
+      });
+    }
+
+    if (response.data.error == null) {
+      setNewPassword('');
+      setCurrentPassword('');
+      setConfirmationPassword('');
     }
   }
 
@@ -40,11 +66,15 @@ export default function ChangePassword(props) {
 
   return (
     <div id="modal" className={className}>
+      <ToastsContainer
+        store={ToastsStore}
+        position={ToastsContainerPosition.TOP_RIGHT}
+      />
       <div className="content">
         <h3>Alteração de senha</h3>
         <form
           className="register_content-zone2-form1"
-          onSubmit={handleRegister}
+          onSubmit={handleChangePassword}
         >
           <input
             type="password"
