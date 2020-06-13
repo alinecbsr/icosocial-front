@@ -36,20 +36,19 @@ export default function ProfilePF() {
 
       if (donor) {
         setDonorIsPresent(true);
+        setName(donor.name);
+        setCPF(donor.cpf);
+        setDate(donor.date_of_birth);
+        setCel(donor.cell_phone);
+        setPhone(donor.telephone);
+        setEmail(donor.email);
+        setCEP(donor.zip_code);
+        setUF(donor.state);
+        setCountry(donor.city);
+        setStreet(donor.address);
+        setNumber(donor.number);
+        setComplement(donor.complement);
       }
-
-      setName(donor.name);
-      setCPF(donor.cpf);
-      setDate(donor.date_of_birth);
-      setCel(donor.cell_phone);
-      setPhone(donor.telephone);
-      setEmail(donor.email);
-      setCEP(donor.zip_code);
-      setUF(donor.state);
-      setCountry(donor.city);
-      setStreet(donor.address);
-      setNumber(donor.number);
-      setComplement(donor.complement);
     });
   }, []);
 
