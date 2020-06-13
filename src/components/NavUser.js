@@ -30,9 +30,13 @@ export default function NavUser() {
           >
             Meu perfil
           </Link>
-          <Link className="fixedNav_doe-now" to="/">
+          <a
+            className="fixedNav_doe-now"
+            href="https://pagseguro.uol.com.br/#rmcl"
+            target="_blank"
+          >
             Doe agora
-          </Link>
+          </a>
           <button type="button" onClick={handleLogout}>
             <FiPower size={18} color="#82368C" />
           </button>

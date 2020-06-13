@@ -15,6 +15,20 @@ export const userPersonType = () => {
   return user != null && user.person === 'LEGAL';
 };
 
+export const userDonorOrVoluntary = () => {
+  let type;
+  const userType = localStorage.getItem('user.type');
+  const user = JSON.parse(localStorage.getItem('user'));
+
+  if (userType) {
+    type = userType;
+  } else if (user.type) {
+    type = user.type;
+  }
+
+  return type;
+};
+
 const isAuthenticated = () => {
   const token = localStorage.getItem('token');
 

@@ -70,7 +70,6 @@ export default function Routes() {
         <PrivateRoute path="/dashboard" component={UserHome} />
         <PrivateRoute path="/user/profilepj" component={ProfilePJ} />
         <PrivateRoute path="/user/profilepf" component={ProfilePF} />
-        <PrivateRoute path="/user/confirmation" component={Confirmation} />
       </Switch>
     </BrowserRouter>
   );

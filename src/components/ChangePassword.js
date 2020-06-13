@@ -56,7 +56,9 @@ export default function ChangePassword(props) {
     }
 
     if (response.data.error == null) {
-      history.push('/user/confirmation');
+      setNewPassword('');
+      setCurrentPassword('');
+      setConfirmationPassword('');
     }
   }
 

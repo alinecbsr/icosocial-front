@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable no-alert */
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { FiArrowLeft } from 'react-icons/fi';
 import logo from '../assets/image/logo1.svg';
@@ -26,36 +26,32 @@ export default function ProfilePF() {
   const [number, setNumber] = useState('');
   const [complement, setComplement] = useState('');
 
+  const [donorIsPresent, setDonorIsPresent] = useState(false);
+
   const history = useHistory();
 
-  async function handleProfilePF(e) {
-    e.preventDefault();
+  useEffect(() => {
+    api.get('/donors/profile').then((response) => {
+      const donor = response.data;
 
-    const data = {
-      name,
-      cpf,
-      date,
-      cel,
-      phone,
-      email,
-      cep,
-      uf,
-      country,
-      street,
-      number,
-      complement,
-    };
+      if (donor) {
+        setDonorIsPresent(true);
+      }
 
-    try {
-      const response = await api.post('ongs', data);
-
-      alert(`Registration successful! Your access ID: ${response.data.id}`);
-
-      history.push('/');
-    } catch (err) {
-      alert('Error in registration, try again!');
-    }
-  }
+      setName(donor.name);
+      setCPF(donor.cpf);
+      setDate(donor.date_of_birth);
+      setCel(donor.cell_phone);
+      setPhone(donor.telephone);
+      setEmail(donor.email);
+      setCEP(donor.zip_code);
+      setUF(donor.state);
+      setCountry(donor.city);
+      setStreet(donor.address);
+      setNumber(donor.number);
+      setComplement(donor.complement);
+    });
+  }, []);
 
   function openModal(e) {
     e.preventDefault();
@@ -70,7 +66,6 @@ export default function ProfilePF() {
   }
 
   function openConfirmation(e) {
-    e.preventDefault();
     setShowConfirmation(true);
     document.querySelector('body').classList.toggle('hideScroll');
   }
@@ -79,6 +74,36 @@ export default function ProfilePF() {
     if (e) e.preventDefault();
     setShowConfirmation(false);
     document.querySelector('body').classList.toggle('hideScroll');
+  }
+
+  async function handleProfilePF(e) {
+    e.preventDefault();
+
+    const data = {
+      name,
+      cpf,
+      cell_phone: cel,
+      telephone: phone,
+      email,
+      state: uf,
+      city: country,
+      address: street,
+      zip_code: cep,
+      number,
+      complement,
+      date_of_birth: date,
+    };
+
+    try {
+      if (!donorIsPresent) {
+        await api.post('/donors', data);
+      } else {
+        await api.put('/donors', data);
+      }
+    } catch (err) {
+      alert('Error in registration, try again!');
+    }
+    openConfirmation();
   }
 
   return (
@@ -197,7 +222,7 @@ export default function ProfilePF() {
             className="profile_content-zone2-form2"
             onSubmit={handleProfilePF}
           >
-            <button className="button" type="submit" onClick={openConfirmation}>
+            <button className="button" type="submit">
               Salvar
             </button>
             <Link to="/dashboard">
