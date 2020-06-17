@@ -30,11 +30,19 @@
 This project was developed with the following technologies:
 
 <ul>
-  <li><a href="https://reactjs.org/">ReactJs</a></li>
+  <li><a href="https://sass-lang.com/">JavaScript</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a></li>
+  <li><a href="https://facebook.github.io/jsx/">JSX</a></li>
   <li><a href="https://sass-lang.com/">Sass</a></li>
+  <li><a href="https://reactjs.org/">ReactJs</a></li>
   <li><a href="https://reacttraining.com/react-router/">React Router DOM</a></li>
   <li><a href="https://fullpage.caferati.me/">React Awesome Slider</a></li>
-  <li><a href="https://reactjs.org/docs/context.html">React Context</a></li>
+  <li><a href="https://www.npmjs.com/package/react-toasts">React Toasts</a></li>
+  <li><a href="https://react-icons.github.io/react-icons/">React Icons</a></li>
+  <li><a href="https://prettier.io/">Prettier</a></li>
+  <li><a href="https://eslint.org/">EsLint</a></li>
+  <li><a href="https://babeljs.io/">Babel</a></li>
+  <li><a href="https://webpack.js.org/">Webpack</a></li>
 </ul>
 
 ## :computer: Project
@@ -82,21 +90,10 @@ This project is about the institution's website.
 
 <p>This project is under the MIT license. See the file <a href="LICENSE.md">LICENSE</a> for more details.</p>
 
-## :blue_heart: Contributors
+## :purple_heart: Contributors
 
 <table>
   <tr>
-    <td align="center" style="border: none;">
-      <a href="https://github.com/wwwgomes">
-        <img style="border-radius: 50px;" src="https://avatars3.githubusercontent.com/u/57773072?s=400&u=3e7a2a8a432118afa4446cacfcaf9c118056db7b&v=4" width="70px;" alt="Williams Gomes"/>
-        <br />
-        <sub>
-          <b>Williams Gomes</b>
-        </sub>
-      </a>
-      <br />
-      <p><scan title="Code">💻</scan>|<scan title="Documentation">📖</scan>|<scan title="Bugs">🐛</scan></p>
-    </td>
     <td align="center" style="border: none;">
       <a href="https://github.com/alinecbsr">
         <img style="border-radius: 50px;" src="https://avatars0.githubusercontent.com/u/48742480?s=460&u=d21eae3038217c687d478969e8bf7b1bee1b9c3e&v=4" width="70px;" alt="Aline Rosa"/>
@@ -107,6 +104,17 @@ This project is about the institution's website.
       </a>
       <br />
       <p><scan title="Code">💻</scan>|<scan title="Documentation">🎨</scan>|<scan title="Bugs">🐛</scan></p>
+    </td>
+        <td align="center" style="border: none;">
+      <a href="https://github.com/wwwgomes">
+        <img style="border-radius: 50px;" src="https://avatars3.githubusercontent.com/u/57773072?s=400&u=3e7a2a8a432118afa4446cacfcaf9c118056db7b&v=4" width="70px;" alt="Williams Gomes"/>
+        <br />
+        <sub>
+          <b>Williams Gomes</b>
+        </sub>
+      </a>
+      <br />
+      <p><scan title="Code">💻</scan>|<scan title="Documentation">📖</scan>|<scan title="Bugs">🐛</scan></p>
     </td>
     <td align="center" style="border: none;">
       <a href="https://github.com/Marianasn4">
