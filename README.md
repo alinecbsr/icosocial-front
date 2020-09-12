@@ -20,7 +20,7 @@
   <a href="#blue_heart-contributors">Contributors</a>
 </p>
 
-<br>
+<br/>
 
 <p align="center" style="color: #333">
 <strong>Icósocial</strong> Icósocial is an NGO (Non-Governmental Organization) that serves people (children and their guardians) offering language classes, sports, music and other classes in addition to offering social benefits such as clothing bazaar and donations of basic food baskets.</p>
@@ -48,63 +48,87 @@ This project was developed with the following technologies:
 ## :computer: Project
 
 As it is a non-governmental organization (NGO), and offers free services for the benefit of the community, the Icósocial needs the disclosure of the institution, publishing the services offered, and adding sponsoring partners to meet any demand for financial resources that guarantee functionality and effectiveness of the services offered.
-<br>
+<br/>
+
 The objective of this project was to develop a web product that benefits a social project. The product is a responsive SPA, which can gradually add functionality. The application will initially present the institution and services offered by it, and disclose the transparency and functionality of the social project. Having features to register volunteers, partners and enable ways of contributing to these maintainers.
-<br>
+<br/>
+
 <a href="https://www.figma.com/file/4gsTecyjeHu1C445GwzWdN/Ic%C3%B3social-SPA">Clicking here</a> it is possible to check the design work developed in Figma, low and high fidelity prototype:
-<span align="center">
-    <img alt="Icó Social" src=".github/Icosocial_Figma.png" width="600px" />
-</span>
-<br>
+<br/>
+
+<h2 align="center">
+<br/>
+<br/>
+
+<img alt="Icó Social" src=".github/Icosocial_Figma.png" width="600px" />
+<br/>
+
+</h2>
+<br/>
+<br/>
+
 <strong>Project Web</strong>
-<br>
-<span align="center">
+<br/>
+<br/>
+
+<h2 align="center">
 
 ![](https://github.com/alinecbsr/icosocial-front/blob/develop/.github/Web.gif)
-</span>
-<br>
+</h2>
+<br/>
+<br/>
+
 <strong>Project Web</strong>
-<br>
-<span align="center">
+<br/>
+<br/>
+
+<h2 align="center">
 
 ![](https://github.com/alinecbsr/icosocial-front/blob/develop/.github/Mobile.gif)
-</span>
-
+</h2>
+<br/>
+<br/>
 
 #### 🔢 Commands
 
 ##### **`yarn start`**
->Runs the app in the development mode.
->Open http://localhost:3000 to view it in the browser.
+
+> Runs the app in the development mode.
+> Open http://localhost:3000 to view it in the browser.
 >
->The page will reload if you make edits.
->You will also see any lint errors in the console.
+> The page will reload if you make edits.
+> You will also see any lint errors in the console.
 
 ##### **`yarn test`**
->Launches the test runner in the interactive watch mode.
->See the section about [running tests](https://create-react-app.dev/docs/running-tests/) for more information.
+
+> Launches the test runner in the interactive watch mode.
+> See the section about [running tests](https://create-react-app.dev/docs/running-tests/) for more information.
 
 ##### **`yarn build`**
->Builds the app for production to the `build` folder.
->It correctly bundles React in production mode and optimizes the build for the best performance.
->
->The build is minified and the filenames include the hashes.
->Your app is ready to be deployed!
 
->See the section about [deployment](https://create-react-app.dev/docs/deployment/) for more information.
+> Builds the app for production to the `build` folder.
+> It correctly bundles React in production mode and optimizes the build for the best performance.
+>
+> The build is minified and the filenames include the hashes.
+> Your app is ready to be deployed!
+
+> See the section about [deployment](https://create-react-app.dev/docs/deployment/) for more information.
 
 ##### **`yarn eject`**
->**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+
+> **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 >
->If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+> If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 >
->Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+> Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 >
->You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+> You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+<br/>
 
 ## :family_man_man_boy_boy: Contribute
 
 <p>To contribute, <a href="CONTRIBUTING.md">follow these instructions</a>.</p>
+<br/>
 
 ## :memo: License
 
