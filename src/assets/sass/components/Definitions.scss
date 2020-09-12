@@ -1,0 +1,64 @@
+.define {
+  width: 100%;
+  max-width: 95%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 5% 0 0 0;
+
+  @include responsive(tab_medium) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.card {
+  max-width: 32rem;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem 0.5rem;
+  border-radius: 25px;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+
+  @include responsive(tab_medium) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 80%;
+    padding: 3rem 3rem;
+  }
+
+  @include responsive(phone) {
+    max-width: 80%;
+  }
+
+  &_title {
+    text-align: center;
+    font-size: 3rem;
+    margin: 2rem 0;
+    color: $color-purple-dark;
+  }
+
+  &_text {
+    font-size: 1.8rem;
+    line-height: 2.7rem;
+    text-align: justify;
+    text-indent: 3rem;
+    padding: 0 1rem 3rem 1rem;
+    color: $color-grey-dark;
+  }
+}
+
+#definition {
+  display: none;
+}
+
+.show {
+  display: flex!important;
+}

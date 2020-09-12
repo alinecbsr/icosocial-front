@@ -1,0 +1,35 @@
+.container-confirm {
+  width: 100vw;
+  height: 100vh;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+  background-color: $color-green-full;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & svg {
+    color: white;
+  }
+}
+
+.confirm__link {
+  margin-top: 30px;
+  font-weight: 600;
+  font-family: 'Poppins' sans-serif;
+  font-size: 2rem;
+  text-decoration: none;
+}
+
+.confirm__link:hover {
+  opacity: 0.8;
+}

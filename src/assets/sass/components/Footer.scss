@@ -1,0 +1,111 @@
+.footer {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 0;
+  background: $color-purple-dark;
+  z-index: 99;
+
+  &__container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 128rem;
+
+    @include responsive(tab_medium) {
+      width: 60%;
+    }
+
+    @include responsive(phone) {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    font-size: 5rem;
+    margin: 4.4rem 0 1.7rem 0;
+    color: $color-white;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  &__message {
+    font-size: 2.1rem;
+    line-height: 3.1rem;
+    margin: 0 0 4.127rem;
+    width: 50%;
+    text-align: center;
+    color: $color-white;
+  }
+
+  &__contacts {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+    @include responsive(tab_medium) {
+      display: flex;
+    }
+  }
+
+  &__contacts--list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    justify-items: center;
+
+    @include responsive(tab_medium) {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  &__contacts--item {
+    width: 20rem;
+    height: 20.4rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    &-container {
+      width: 8.7rem;
+      height: 8.7rem;
+      border-radius: 50%;
+      background: $color-white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    h6 {
+      font-weight: 600;
+      font-size: 1.6rem;
+      margin: 1.5rem 0;
+      color: $color-white;
+    }
+
+    p {
+      font-size: 1.4rem;
+      margin: 0;
+      color: $color-white;
+    }
+  }
+
+  &__copyright {
+    margin: 0;
+    padding: 1rem;
+    font-size: 1.4rem;
+    text-align: center;
+    color: $color-white;
+    border-top: 2px solid $color-green-full;
+  }
+}

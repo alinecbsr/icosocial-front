@@ -1,0 +1,165 @@
+.text {
+  width: 95%;
+  display: flex;
+  flex-wrap: wrap;
+  color: $color-grey-dark;
+  font-size: 1.8rem;
+  font-weight: 300;
+  text-align: justify;
+  text-indent: 3rem;
+  margin-top: 4%;
+
+  @include responsive(phone) {
+    width: 90%;
+  }
+}
+
+.cards {
+  width: 90%;
+  max-width: 980px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 3rem;
+  padding-top: 4%;
+
+  &_area {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 19rem;
+    display: flex;
+    flex-direction: column;
+    background-color: #7159c1;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+
+    &-image1 {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      background-image: url('../../image/coreSchool.svg');
+    }
+
+    &-image2 {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      background-image: url('../../image/coreEnglish.svg');
+    }
+
+    &-image3 {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      background-image: url('../../image/coreJudo.svg');
+    }
+
+    &-image4 {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      background-image: url('../../image/coreArts.svg');
+    }
+
+    &-image5 {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      background-image: url('../../image/coreMusic.svg');
+    }
+
+    &-image6 {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      background-image: url('../../image/coreIntegration.svg');
+    }
+
+    &-text1 {
+      position: absolute;
+      z-index: 3;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      background: rgb(47, 51, 55);
+      background: radial-gradient(
+        circle,
+        rgba(47, 51, 55, 0.8869922969187675) 0%,
+        rgba(15, 15, 15, 0.8085609243697479) 100%
+      );
+
+      &-single {
+        margin: 0;
+        padding: 0;
+        width: auto;
+        height: auto;
+        color: $color-white;
+        font-size: 2.8rem;
+        font-weight: 600;
+        text-align: center;
+      }
+
+      &:hover {
+        background: rgb(49, 182, 39);
+        background: radial-gradient(
+          circle,
+          rgba(49, 182, 39, 0.8309698879551821) 0%,
+          rgba(49, 182, 39, 0.8253676470588236) 100%
+        );
+      }
+    }
+
+    &-text2 {
+      position: absolute;
+      z-index: 3;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      background: rgb(47, 51, 55);
+      background: radial-gradient(
+        circle,
+        rgba(47, 51, 55, 0.8869922969187675) 0%,
+        rgba(15, 15, 15, 0.8085609243697479) 100%
+      );
+
+      &-single {
+        margin: 0;
+        padding: 0;
+        width: auto;
+        height: auto;
+        color: $color-white;
+        font-size: 2.8rem;
+        font-weight: 600;
+        text-align: center;
+      }
+
+      &:hover {
+        background: rgb(130, 54, 140);
+        background: radial-gradient(
+          circle,
+          rgba(130, 54, 140, 0.9122023809523809) 0%,
+          rgba(130, 54, 140, 0.8337710084033614) 100%
+        );
+      }
+    }
+
+    &_area:hover {
+      transform: translateY(-7px);
+    }
+  }
+}

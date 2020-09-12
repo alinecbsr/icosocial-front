@@ -1,0 +1,232 @@
+.fixedNav {
+  position: fixed;
+  width: 100vw;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $color-white;
+  z-index: 100;
+
+  &.hide-element {
+    display: none !important;
+  }
+
+  &_logo {
+    width: 18rem;
+    height: 6rem;
+    cursor: pointer;
+    padding-left: 1.5rem;
+  }
+
+  &_context {
+    width: 100%;
+    max-width: 73rem;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: $color-white;
+    margin-left: 2rem;
+    border: none;
+    z-index: 100;
+
+    &.menu_show {
+      display: flex;
+
+      @include responsive(md_desktop) {
+        display: none;
+      }
+
+      @include responsive(phone) {
+        display: none;
+      }
+    }
+
+    &-list {
+      width: 100%;
+      height: auto;
+      max-height: 6.5rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2.5rem 0 0 0;
+      list-style: none;
+      margin: 0;
+
+      @include responsive(md_desktop) {
+        padding: 1.6rem;
+        width: 100vw;
+        min-height: 22rem;
+        list-style: none;
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-top: 6rem;
+        text-align: start;
+        text-indent: 5.5rem;
+        flex-direction: column;
+        background-color: $color-white;
+        z-index: 0;
+        padding-bottom: 3rem;
+      }
+
+      &-item {
+        max-width: auto;
+        height: 100%;
+        border-bottom: 0.5rem solid transparent;
+        color: $color-purple-dark;
+        text-transform: uppercase;
+        text-decoration: none;
+        letter-spacing: 0.1rem;
+        padding: 0 0 1.3rem 1rem;
+        margin-bottom: 0.6rem;
+        font-size: 1.6rem;
+        line-height: 2rem;
+        font-weight: 700;
+        cursor: pointer;
+      }
+
+      &-item:hover {
+        color: $color-grey-medium;
+        border-bottom: 0.5rem solid $color-green-full;
+
+        @include responsive(md_desktop) {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+
+  &_mobile {
+    display: none;
+
+    @include responsive(md_desktop) {
+      width: auto;
+      height: auto;
+      display: flex;
+      background-color: $color-white;
+      margin-right: 2rem;
+    }
+
+    &-hamburger {
+      display: none;
+
+      @include responsive(md_desktop) {
+        display: block;
+        font-size: 2.5rem;
+        cursor: pointer;
+        border: 0;
+        text-align: center;
+        background: transparent;
+        color: $color-purple-dark;
+        outline: none;
+      }
+
+      @include responsive(phone) {
+        display: block;
+        font-size: 2.5rem;
+        cursor: pointer;
+        border: 0;
+        text-align: center;
+        background: transparent;
+        color: $color-purple-dark;
+        outline: none;
+      }
+    }
+  }
+
+  &_btn {
+    display: flex;
+    width: auto;
+    height: auto;
+
+    &-rgt,
+    &-lgn {
+      width: 12rem;
+      height: 4rem;
+      display: flex;
+      margin: 0 1rem 0 1rem;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: $color-purple-medium;
+      background-color: transparent;
+      border: 1px solid transparent;
+      background: transparent;
+      border-radius: 8px;
+      transition: all 0.1s ease-in-out;
+      text-decoration: none;
+      cursor: pointer;
+
+      &-icon {
+        margin-right: 1rem;
+        font-size: 2rem;
+        color: $color-purple-medium;
+      }
+
+      &:hover {
+        transition: 400ms;
+        box-shadow: 0px 3px 6px $color-grey-light;
+        border: 1px solid transparent;
+        background: $color-white;
+        border-radius: 8px;
+
+        @include responsive(phone) {
+          display: none;
+        }
+
+        @include responsive(phone) {
+          display: none;
+        }
+      }
+
+      @include responsive(phone) {
+        display: none;
+      }
+    }
+  }
+
+  &_doe {
+    display: flex;
+    max-width: 12rem;
+    max-height: 4rem;
+    padding: 0 2rem 0 1rem;
+
+    @include responsive(phone) {
+      display: none;
+    }
+
+    &-now {
+      width: 12rem;
+      height: 4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: $color-white;
+      background-color: $color-green-full;
+      border: 1px solid transparent;
+      border-radius: 4px;
+      transition: all 0.1s ease-in-out;
+      text-decoration: none;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.8;
+      }
+
+      @include responsive(md_desktop) {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
