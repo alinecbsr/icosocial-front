@@ -23,7 +23,7 @@
 <br>
 
 <p align="center" style="color: #333">
-<strong>Icósocial</strong> is an NGO (non-governmental organization) that helps people (children and their guardians) by offering language, sports and other classes.</p>
+<strong>Icósocial</strong> Icósocial is an NGO (Non-Governmental Organization) that serves people (children and their guardians) offering language classes, sports, music and other classes in addition to offering social benefits such as clothing bazaar and donations of basic food baskets.</p>
 
 ## :floppy_disk: Technology
 
@@ -47,9 +47,29 @@ This project was developed with the following technologies:
 
 ## :computer: Project
 
-This project is part of the NGO Icósocial
+As it is a non-governmental organization (NGO), and offers free services for the benefit of the community, the Icósocial needs the disclosure of the institution, publishing the services offered, and adding sponsoring partners to meet any demand for financial resources that guarantee functionality and effectiveness of the services offered.
+<br>
+The objective of this project was to develop a web product that benefits a social project. The product is a responsive SPA, which can gradually add functionality. The application will initially present the institution and services offered by it, and disclose the transparency and functionality of the social project. Having features to register volunteers, partners and enable ways of contributing to these maintainers.
+<br>
+<a href="https://www.figma.com/file/4gsTecyjeHu1C445GwzWdN/Ic%C3%B3social-SPA">Clicking here</a> it is possible to check the design work developed in Figma, low and high fidelity prototype:
+<span align="center">
+    <img alt="Icó Social" src=".github/Icosocial_Figma.png" width="600px" />
+</span>
+<br>
+<strong>Project Web</strong>
+<br>
+<span align="center">
 
-This project is about the institution's website.
+![](https://github.com/alinecbsr/icosocial-front/blob/develop/.github/Web.gif)
+</span>
+<br>
+<strong>Project Web</strong>
+<br>
+<span align="center">
+
+![](https://github.com/alinecbsr/icosocial-front/blob/develop/.github/Mobile.gif)
+</span>
+
 
 #### 🔢 Commands
 
