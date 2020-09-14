@@ -74,6 +74,7 @@ The objective of this project was to develop a web product that benefits a socia
 <h2 align="center">
 
 ![](https://github.com/alinecbsr/icosocial-front/blob/master/.github/Web.gif)
+
 </h2>
 <br/>
 <br/>
@@ -85,6 +86,7 @@ The objective of this project was to develop a web product that benefits a socia
 <h2 align="center">
 
 ![](https://github.com/alinecbsr/icosocial-front/blob/master/.github/Mobile.gif)
+
 </h2>
 <br/>
 <br/>
